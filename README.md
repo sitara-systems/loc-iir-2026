@@ -31,7 +31,7 @@ research/                     # Search results, findings, and downloaded images
 
 Two interactive prototypes exploring LC digital collections:
 
-- **What Did They Know?** — Traces the early federal climate science record through LC's newspaper archives and government documents
+- **What Did We Know?** — Traces over 150 years of climate evidence through LC's newspaper archives, scientific journals, and government documents
 - **Hidden in Plain Sight** — Two family histories (Nino-Dominguez, Khan/Mohaiyuddin) documented in LC collections but obscured by current discovery tools
 
 ## Scripts
