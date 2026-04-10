@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The American archive held the evidence for nearly 150 years. Search it yourself and watch the silence appear.">
-  <title>Search the Silence · What Did They Know?</title>
+  <meta name="description" content="The Library of Congress holds over 150 years of climate evidence. Search it yourself and explore how coverage changed over time.">
+  <title>Search the Archive · What Did We Know?</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <style>
@@ -177,12 +177,12 @@
 <section class="hero">
   <div class="hero-content">
     <div class="hero-kicker">An interactive investigation</div>
-    <h1 class="hero-title">Search the Silence</h1>
-    <p class="hero-sub">132 years of evidence. Watch it disappear.</p>
+    <h1 class="hero-title">Search the Archive</h1>
+    <p class="hero-sub">Over 150 years of climate evidence. Explore how coverage changed.</p>
     <p class="hero-lede">
-      Climate change didn't appear in 1988. It didn't appear in 1965.
-      The American archive has held the evidence for nearly 150 years.
-      <strong>Search it yourself — and watch the moment the record goes quiet.</strong>
+      Climate change was named, measured, and published in American newspapers
+      starting in the 1850s. The Library of Congress holds this record.
+      <strong>Search it yourself — and explore how coverage shifted over time.</strong>
     </p>
     <button class="hero-cta" id="start-btn">Begin the search ↓</button>
   </div>
@@ -298,32 +298,32 @@
     <div class="results-area" id="results-7"></div>
   </div>
 
-  <!-- ─── THE SILENCE MOMENT ──────────────────────────────── -->
+  <!-- ─── THE COVERAGE GAP ──────────────────────────────── -->
   <div class="step" data-delay="0" id="step-silence">
     <div class="silence-moment">
-      <div class="big-num">1</div>
+      <div class="big-num">?</div>
       <div class="big-label">
-        One newspaper page in the entire digitized American record
-        mentions "global warming" before James Hansen's
-        1988 testimony to Congress.
+        After the mid-1960s, newspaper coverage of climate science
+        in Chronicling America drops sharply — and doesn't return
+        until Hansen's 1988 testimony.
       </div>
     </div>
 
     <div class="contrast" id="contrast-box">
       <div class="contrast-box violet">
-        <div class="cb-number">69+</div>
-        <div class="cb-label">newspaper pages on atmospheric warming <em>before</em> the government knew</div>
+        <div class="cb-number">150+</div>
+        <div class="cb-label">years of climate evidence in Library of Congress collections</div>
       </div>
       <div class="contrast-box ember">
-        <div class="cb-number">6</div>
-        <div class="cb-label">newspaper pages on climate <em>after</em> the government was warned</div>
+        <div class="cb-number">1965</div>
+        <div class="cb-label">the year coverage in Chronicling America begins to thin</div>
       </div>
     </div>
 
     <div class="narration" style="margin-top: 2rem;">
-      <p>Before 1965, Americans could find climate science in their local paper. After 1965 — after the government officially acknowledged the danger — <strong>the coverage nearly vanished.</strong></p>
-      <p>Social scientists call this <strong>pluralistic ignorance</strong> — when everyone in a chain assumes someone else is communicating the danger. Scientists assume the press will cover it. The press assumes the government will act on it. The government assumes the public already knows. No one speaks. The record holds the proof.</p>
-      <span class="pull ember">The archive held the knowledge for 132 years. It also held the silence. Both are in the same building.</span>
+      <p>Before 1965, Americans could find climate science in their local papers. After the mid-1960s, <strong>the coverage in the digitized record drops sharply</strong> — right as the science enters the congressional record.</p>
+      <p>Is this a gap in what was published, or a gap in what has been digitized? Chronicling America's coverage thins after approximately 1963. <strong>Answering that question is one of the core goals of this project</strong> — and one the Library of Congress is uniquely positioned to help explore, because the physical newspapers are in the building.</p>
+      <span class="pull ember">Over 150 years of evidence. All in the same building. Read together for the first time.</span>
     </div>
   </div>
 
@@ -332,8 +332,8 @@
     <div class="finale">
       <div class="finale-year">1988</div>
       <p>On June 23, 1988, James Hansen tells Congress that global warming has already begun. He is 99% certain. The press is in the room. The front pages carry it.</p>
-      <p>Hansen didn't discover climate change. <strong>He said out loud what the record had held for 132 years.</strong></p>
-      <p><em>What Did They Know?</em> is an archival investigation that reads the American record against itself — the newspapers that covered it freely, the government reports that finally confirmed it, and the silence that fell in between.</p>
+      <p>Hansen didn't discover climate change. <strong>He said out loud what the Library's collections show was known for over 130 years.</strong></p>
+      <p><em>What Did We Know?</em> is an archival investigation that reads the Library's collections together for the first time — the newspapers that covered the science, the government reports that confirmed it, and the question of what happened to public awareness in between.</p>
       <a href="https://www.sitara.systems" class="cta-btn" target="_blank" rel="noopener">Sitara Systems <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M4.5 2a.5.5 0 0 0 0 1h6.793L2.146 12.146a.5.5 0 0 0 .708.708L12 3.707V10.5a.5.5 0 0 0 1 0v-9a.5.5 0 0 0-.5-.5h-8z"/></svg></a>
     </div>
   </div>
@@ -362,8 +362,8 @@ const SEARCHES = [
     searchMs: 1800,
     count: 42,
     results: [
-      { title: "The Leon Reporter", date: "March 24, 1910", source: "Leon, Iowa", snippet: "The theory that the combustion of coal adds carbon dioxide to the atmosphere, which in turn affects the temperature of the Earth…", thumb: "images/N-leon-reporter-iowa-1910-03-24.jpg" },
-      { title: "The San Francisco Call", date: "July 27, 1913", source: "San Francisco, Calif.", snippet: "Carbon dioxide produced by the burning of coal and other fuels has been shown to have a measurable effect on the temperature of the atmosphere…", thumb: "images/N-san-francisco-call-1913-07-27.jpg" },
+      { title: "The Leon Reporter", date: "March 24, 1910", source: "Leon, Iowa", snippet: "The theory that the combustion of coal adds carbon dioxide to the atmosphere, which in turn affects the temperature of the Earth…", thumb: "../../research/climate-images/N-leon-reporter-iowa-1910-03-24.jpg" },
+      { title: "The San Francisco Call", date: "July 27, 1913", source: "San Francisco, Calif.", snippet: "Carbon dioxide produced by the burning of coal and other fuels has been shown to have a measurable effect on the temperature of the atmosphere…", thumb: "../../research/climate-images/N-san-francisco-call-1913-07-27.jpg" },
     ],
     narrationAfter: null
   },
@@ -374,7 +374,7 @@ const SEARCHES = [
     searchMs: 2000,
     count: 27,
     results: [
-      { title: "Seward Daily Gateway", date: "June 6, 1931", source: "Seward, Alaska", snippet: "Scientists report that increasing carbon dioxide in the atmosphere may be responsible for a gradual warming trend observed across the Northern Hemisphere…", thumb: "images/N-seward-daily-gateway-alaska-1931-06-06.jpg" },
+      { title: "Seward Daily Gateway", date: "June 6, 1931", source: "Seward, Alaska", snippet: "Scientists report that increasing carbon dioxide in the atmosphere may be responsible for a gradual warming trend observed across the Northern Hemisphere…", thumb: "../../research/climate-images/N-seward-daily-gateway-alaska-1931-06-06.jpg" },
       { title: "The Daily Tribune", date: "April 12, 1933", source: "Wisconsin Rapids, Wis.", snippet: "Earth's blanket of carbon dioxide from the burning of coal and oil thickens year by year, and some scientists believe temperatures will continue to rise…" },
       { title: "The Evening Independent", date: "September 20, 1938", source: "St. Petersburg, Fla.", snippet: "British engineer Guy Stewart Callendar presents evidence that the Earth's temperature has risen measurably, and links the change to carbon dioxide from fuel combustion…" },
     ],
@@ -388,10 +388,10 @@ const SEARCHES = [
     count: 4,
     countClass: "",
     results: [
-      { title: "Evening Star", date: "January 26, 1958", source: "Washington, D.C. · Page 23", snippet: "THE NEW FORCES — Mystery of the Warming World. By John Stark. Maybe the most pressing problem facing the world today…", highlight: true, thumb: "images/N-evening-star-dc-1958-01-26-mystery-warming-world.jpg" },
-      { title: "Evening Star", date: "August 26, 1959", source: "Washington, D.C. · Page 7", snippet: "Bouncing radar signals off the moon… Scientists report continued measurements of carbon dioxide buildup in the atmosphere…", thumb: "images/N-evening-star-dc-1959-08-26.jpg" },
-      { title: "Atlanta Daily World", date: "September 1, 1956", source: "Atlanta, Georgia · Page 6", snippet: "Research scientists have reported new findings on the relationship between carbon dioxide levels and global temperature trends…", thumb: "images/N-atlanta-daily-world-1956-09-01.jpg" },
-      { title: "Jackson Advocate", date: "October 26, 1957", source: "Jackson, Mississippi · Page 2", snippet: "International Geophysical Year scientists are measuring atmospheric gases that may be contributing to a warming of the Earth's climate…", thumb: "images/N-jackson-advocate-1957-10-26.jpg" },
+      { title: "Evening Star", date: "January 26, 1958", source: "Washington, D.C. · Page 23", snippet: "THE NEW FORCES — Mystery of the Warming World. By John Stark. Maybe the most pressing problem facing the world today…", highlight: true, thumb: "../../research/climate-images/N-evening-star-dc-1958-01-26-mystery-warming-world.jpg" },
+      { title: "Evening Star", date: "August 26, 1959", source: "Washington, D.C. · Page 7", snippet: "Bouncing radar signals off the moon… Scientists report continued measurements of carbon dioxide buildup in the atmosphere…", thumb: "../../research/climate-images/N-evening-star-dc-1959-08-26.jpg" },
+      { title: "Atlanta Daily World", date: "September 1, 1956", source: "Atlanta, Georgia · Page 6", snippet: "Research scientists have reported new findings on the relationship between carbon dioxide levels and global temperature trends…", thumb: "../../research/climate-images/N-atlanta-daily-world-1956-09-01.jpg" },
+      { title: "Jackson Advocate", date: "October 26, 1957", source: "Jackson, Mississippi · Page 2", snippet: "International Geophysical Year scientists are measuring atmospheric gases that may be contributing to a warming of the Earth's climate…", thumb: "../../research/climate-images/N-jackson-advocate-1957-10-26.jpg" },
     ],
     narrationAfter: null
   },
@@ -547,18 +547,18 @@ async function revealStep(id) {
    reveal of a narration step, followed by a user-paced pause. */
 
 const SEQUENCE = [
-  // Phase 1: The Archive Knew First
+  // Phase 1: The Science Emerges
   { type: 'search', idx: 0, btnLabel: 'Next search →', scrollTo: 'step-2' },
   { type: 'search', idx: 1, btnLabel: 'Next search →', scrollTo: 'step-3' },
   { type: 'search', idx: 2, btnLabel: 'Continue →', scrollTo: 'step-tally', ember: false },
   // Turning point
-  { type: 'reveal', id: 'step-tally', btnLabel: 'Enter the silence →', ember: true, scrollTo: 'step-4' },
-  // Phase 2: The Silence
+  { type: 'reveal', id: 'step-tally', btnLabel: 'What happened next? →', ember: true, scrollTo: 'step-4' },
+  // Phase 2: The Coverage Gap
   { type: 'search', idx: 3, btnLabel: 'Next search →', scrollTo: 'step-5', ember: true },
   { type: 'search', idx: 4, btnLabel: 'Next search →', scrollTo: 'step-6', ember: true },
   { type: 'search', idx: 5, btnLabel: 'One last search →', scrollTo: 'step-7', ember: true },
   { type: 'search', idx: 6, btnLabel: null, scrollTo: 'step-silence', ember: true },
-  // Silence moment + finale (no button needed on last two)
+  // Coverage gap + finale (no button needed on last two)
   { type: 'reveal', id: 'step-silence', btnLabel: null, scrollTo: 'step-finale' },
   { type: 'reveal', id: 'step-finale', btnLabel: null },
 ];
