@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Climate change didn't begin in 1988. It didn't begin in 1965. The American archive has held the evidence for nearly 150 years.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Did They Know?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --violet:#967DFF;--pleione:#CBBEFF;--pumpkin:#FA941B;--arcturus:#FCC98D;
+      --white:#FFFFFF;--surface-dark:#0a0a0a;--surface-panel:#111111;
+      --violet-text:#A990FF;--corvus-text:#A0A0A0;
+      --text-secondary:rgba(255,255,255,0.65);--text-tertiary:rgba(255,255,255,0.6);
+      --ember:#E85D3A;--ember-text:#FF8A6A;--ice-text:#7DD3EE;
+      --font-display:'Nunito',sans-serif;--font-body:'Nunito Sans',sans-serif;
+      --sp-xl:4rem;--sp-2xl:6rem;--sp-3xl:8rem;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--font-body);background:var(--surface-dark);color:var(--white);overflow-x:hidden;line-height:1.6}
+    img{display:block;max-width:100%}
+
+    .nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.75rem 2rem;background:rgba(10,10,10,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(150,125,255,0.12)}
+    .nav-logo{display:flex;align-items:center;gap:0.6rem;font-family:var(--font-display);font-weight:800;font-size:0.95rem;color:var(--white);text-decoration:none}
+    .nav-logo svg{width:26px;height:26px}
+    .nav-label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--corvus-text)}
+
+    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:7rem 2rem 5rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 38%,rgba(232,93,58,0.05),transparent 70%),radial-gradient(ellipse 40% 30% at 70% 65%,rgba(91,184,212,0.03),transparent 60%);pointer-events:none}
+    .hero-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+    .hero-kicker{font-size:0.78rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--ember-text);margin-bottom:1.4rem;opacity:0;animation:fadeUp .8s .2s ease forwards}
+    .hero-title{font-family:var(--font-display);font-weight:900;font-size:clamp(2.8rem,9vw,5.5rem);line-height:0.95;letter-spacing:-0.03em;margin-bottom:0.6rem;opacity:0;animation:fadeUp .8s .4s ease forwards}
+    .hero-sub{font-family:var(--font-display);font-weight:400;font-size:clamp(1rem,2.5vw,1.4rem);color:var(--text-secondary);margin-bottom:3rem;opacity:0;animation:fadeUp .8s .5s ease forwards}
+    .hero-lede{max-width:600px;font-size:clamp(0.95rem,1.8vw,1.1rem);line-height:1.85;color:var(--text-secondary);opacity:0;animation:fadeUp .8s .7s ease forwards}
+    .hero-lede strong{color:rgba(255,255,255,0.92)}
+
+    .ch-head{padding:var(--sp-3xl) 2rem var(--sp-xl);text-align:center}
+    .ch-label{font-size:0.72rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--violet-text);margin-bottom:1rem}
+    .ch-label.ember{color:var(--ember-text)}
+    .ch-title{font-family:var(--font-display);font-weight:900;font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.08;letter-spacing:-0.02em;margin-bottom:1rem;max-width:680px;margin-left:auto;margin-right:auto}
+    .ch-sub{font-size:clamp(0.92rem,1.6vw,1.05rem);font-weight:300;color:var(--text-secondary);max-width:540px;margin:0 auto;line-height:1.72}
+
+    .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(150,125,255,0.18) 30%,rgba(150,125,255,0.18) 70%,transparent)}
+    .divider.ember{background:linear-gradient(90deg,transparent,rgba(232,93,58,0.2) 30%,rgba(232,93,58,0.2) 70%,transparent)}
+
+    /* FULL-BLEED INTERSTITIAL */
+    .interstitial{width:100%;padding:5rem 2rem;text-align:center;position:relative;overflow:hidden}
+    .interstitial.dark{background:#000}
+    .interstitial-inner{max-width:580px;margin:0 auto;position:relative;z-index:1}
+    .interstitial-year{font-family:var(--font-display);font-weight:900;font-size:clamp(4rem,14vw,9rem);letter-spacing:-0.04em;line-height:0.85;margin-bottom:1.5rem}
+    .interstitial-year.violet{color:var(--violet-text)}
+    .interstitial-year.ember{color:var(--ember-text)}
+    .interstitial p{font-size:clamp(0.95rem,1.5vw,1.08rem);line-height:1.82;color:var(--text-secondary);margin-bottom:1rem}
+    .interstitial strong{color:rgba(255,255,255,0.92)}
+    .interstitial em{color:rgba(255,255,255,0.78);font-style:italic}
+
+    .scrolly{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;background:var(--surface-panel)}
+    .sticky-pane{position:sticky;top:52px;height:calc(100vh - 52px);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#0d0d0d}
+
+    .vis-card{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem;text-align:center;transition:opacity .4s ease,background .6s ease;position:relative}
+    .vis-card.newspaper{background:linear-gradient(160deg,#16150f,#0d0d0d)}
+    .vis-card.photograph{background:linear-gradient(160deg,#0d1015,#0d0d0d)}
+    .vis-card.dark{background:#000}
+    .vis-icon{width:52px;height:52px;margin-bottom:1.2rem;opacity:0.2}
+    .vis-title{font-family:var(--font-display);font-weight:800;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.5rem}
+    .vis-desc{font-size:0.82rem;color:rgba(255,255,255,0.3);max-width:300px;line-height:1.55}
+    .vis-card.dark .vis-title{color:var(--ember-text);opacity:0.6;font-size:0.9rem}
+    .vis-card.dark .vis-icon{opacity:0.06}
+    .vis-card.dark .vis-desc{color:rgba(255,255,255,0.15)}
+    .vis-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;opacity:0;transition:opacity .5s ease;z-index:1;background:#0d0d0d;padding:1rem}
+    .vis-img.active{opacity:1}
+    .vis-card.newspaper .vis-img{object-fit:contain;padding:0.5rem}
+    .vis-card.photograph .vis-img{object-fit:cover;padding:0}
+    .vis-placeholder{transition:opacity .3s ease;z-index:0}
+    .vis-card.has-img .vis-placeholder{opacity:0.15}
+
+    .source-chip{position:absolute;top:0.8rem;left:0.8rem;z-index:10;padding:0.3rem 0.65rem;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.08);border-radius:3px;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);pointer-events:none;transition:opacity .3s ease,color .3s ease,border-color .3s ease}
+    .source-chip.ca{border-color:rgba(252,201,141,0.3);color:var(--arcturus)}
+    .source-chip.fsa{border-color:rgba(169,144,255,0.3);color:var(--violet-text)}
+    .source-chip.congress{border-color:rgba(91,184,212,0.3);color:var(--ice-text)}
+    .source-chip.hidden{opacity:0}
+
+    .text-pane{padding:18vh 8% 22vh;display:flex;flex-direction:column;gap:70vh}
+    .block{opacity:0.12;transition:opacity .5s ease}
+    .block.on{opacity:1}
+
+    .block-date{font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:0.3rem}
+    .block-hed{font-family:var(--font-display);font-weight:900;font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.08;letter-spacing:-0.02em;margin-bottom:0.8rem}
+    .block-hed.ember{color:var(--ember-text)}
+    .block-hed.ice{color:var(--ice-text)}
+    .block-hed.violet{color:var(--violet-text)}
+
+    .block-body p{font-size:clamp(0.95rem,1.4vw,1.05rem);line-height:1.82;color:rgba(255,255,255,0.68);margin-bottom:0.85rem}
+    .block-body p:last-child{margin-bottom:0}
+    .block-body strong{color:rgba(255,255,255,0.95);font-weight:700}
+    .block-body em{font-style:italic;color:rgba(255,255,255,0.8)}
+
+    .pull{display:block;margin:1.2rem 0;padding-left:1.1rem;border-left:2px solid rgba(150,125,255,0.3);font-family:var(--font-display);font-size:clamp(1.02rem,2vw,1.25rem);font-weight:700;font-style:italic;line-height:1.45;color:var(--pleione)}
+    .pull.ember{border-left-color:rgba(232,93,58,0.4);color:var(--ember-text)}
+
+    .silence{padding:var(--sp-3xl) 2rem;background:#000;text-align:center;position:relative;overflow:hidden}
+    .silence::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 50% 50%,rgba(232,93,58,0.03),transparent 70%);pointer-events:none}
+    .silence-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+    .silence-years{font-family:var(--font-display);font-weight:900;font-size:clamp(4rem,14vw,9rem);letter-spacing:-0.04em;line-height:0.85;color:var(--ember-text);margin-bottom:2rem}
+    .silence-dash{display:inline-block;width:0.5em;height:3px;background:var(--ember-text);vertical-align:middle;margin:0 .05em;border-radius:2px;opacity:0.5}
+    .silence h2{font-family:var(--font-display);font-weight:900;font-size:clamp(1.3rem,3vw,1.9rem);margin-bottom:1.5rem}
+    .silence p{font-size:clamp(0.92rem,1.4vw,1.05rem);line-height:1.82;color:var(--text-secondary);margin-bottom:1rem}
+    .silence strong{color:rgba(255,255,255,0.9)}
+    .silence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+    .s-stat{padding:1rem;background:rgba(255,255,255,0.015);border:1px solid rgba(232,93,58,0.08);border-radius:8px}
+    .s-stat .num{font-family:var(--font-display);font-weight:900;font-size:2.2rem;color:var(--ember-text);line-height:1}
+    .s-stat .lab{font-size:0.74rem;color:var(--text-tertiary);margin-top:0.3rem;line-height:1.35}
+    .silence-caveat{font-size:0.8rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;line-height:1.6;font-style:italic}
+
+    .convergence{padding:var(--sp-3xl) 2rem;text-align:center}
+    .convergence-inner{max-width:600px;margin:0 auto}
+    .convergence-year{font-family:var(--font-display);font-weight:900;font-size:clamp(4rem,12vw,8rem);letter-spacing:-0.04em;line-height:0.9;background:linear-gradient(135deg,var(--ember),var(--pumpkin) 60%,var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:2rem}
+    .convergence p{font-size:clamp(0.92rem,1.5vw,1.05rem);line-height:1.82;color:var(--text-secondary);margin-bottom:1rem}
+    .convergence strong{color:rgba(255,255,255,0.9)}
+
+    .closer{padding:var(--sp-3xl) 2rem var(--sp-2xl);text-align:center;background:#060606;position:relative}
+    .closer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 60%,rgba(150,125,255,0.04),transparent 70%);pointer-events:none}
+    .closer-inner{position:relative;z-index:1;max-width:540px;margin:0 auto}
+    .closer h2{font-family:var(--font-display);font-weight:900;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1.4rem}
+    .closer p{font-size:clamp(0.92rem,1.4vw,1.02rem);line-height:1.8;color:var(--text-tertiary);margin-bottom:0.9rem}
+    .closer em{color:rgba(255,255,255,0.7)}
+    .cta-btn{display:inline-flex;align-items:center;gap:0.5rem;margin-top:2.5rem;padding:0.85rem 2.2rem;background:var(--violet);border:none;border-radius:50px;font-family:var(--font-display);font-weight:800;font-size:0.88rem;color:var(--white);text-decoration:none;letter-spacing:0.02em;transition:background .25s ease,transform .15s ease;box-shadow:0 4px 20px rgba(150,125,255,0.2)}
+    .cta-btn:hover{background:#8068e0;transform:translateY(-1px);box-shadow:0 6px 28px rgba(150,125,255,0.3)}
+
+    .site-footer{padding:2rem;text-align:center;background:#040404;border-top:1px solid rgba(255,255,255,0.04)}
+    .footer-logo{display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-display);font-weight:800;font-size:0.88rem;color:var(--text-tertiary);text-decoration:none;margin-bottom:0.4rem}
+    .footer-logo svg{width:20px;height:20px;opacity:0.4}
+    .footer-note{font-size:0.75rem;color:var(--text-tertiary);letter-spacing:0.04em}
+
+    .skip-nav{position:absolute;top:-100%;left:1rem;z-index:999;padding:0.75rem 1.5rem;background:var(--violet);color:var(--white);font-family:var(--font-display);font-weight:700;font-size:0.9rem;border-radius:0 0 8px 8px;text-decoration:none}
+    .skip-nav:focus{top:0}
+    :focus-visible{outline:3px solid var(--violet-text);outline-offset:3px}
+
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.block{opacity:.12;transition:none}.block.on{opacity:1}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    @media(max-width:820px){.scrolly{grid-template-columns:1fr}.sticky-pane{position:relative;top:auto;height:50vw;min-height:240px}.text-pane{gap:40vh;padding:8vh 7% 14vh}.nav{padding:0.65rem 1.2rem}.nav-label{display:none}.silence-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.text-pane{padding:6vh 6% 12vh}.silence-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-nav">Skip to content</a>
+<nav class="nav" role="navigation" aria-label="Main">
+  <a href="#top" class="nav-logo"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13.5" stroke="#967DFF" stroke-width="1.8" stroke-dasharray="1.2 3.8" stroke-linecap="round"/><circle cx="7" cy="18" r="3.2" fill="#967DFF"/><circle cx="24" cy="10" r="3.8" fill="#FA941B"/><circle cx="16" cy="6" r="1.6" fill="white"/><circle cx="20" cy="7" r="1.2" fill="white"/><circle cx="12" cy="8" r="1" fill="white"/></svg> Sitara Systems</a>
+  <span class="nav-label">Library of Congress · Innovator in Residence</span>
+</nav>
+
+<main id="main">
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="hero-kicker">An archival investigation</div>
+    <h1 class="hero-title">What Did They Know?</h1>
+    <p class="hero-sub">And when did they stop telling us?</p>
+    <p class="hero-lede">
+      Climate change didn't appear in 1988, when a NASA scientist
+      told Congress the warming had begun. It didn't appear in 1965,
+      when a presidential science panel predicted it. <strong>The
+      American archive has held the evidence for nearly 150 years.</strong>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CHAPTER I — THE ARCHIVE KNEW FIRST                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="ch-head" id="ch1">
+  <div class="ch-label">Chapter I</div>
+  <h2 class="ch-title">The Archive Knew First</h2>
+  <p class="ch-sub">For eighty years before any government official read a climate warning, the evidence was assembling itself — in laboratories, in weather stations, in newspaper columns, and in photographs of a landscape coming apart.</p>
+</div>
+
+<!-- ── 1856: FOOTE ────────────────────────────────────────────── -->
+<div class="interstitial dark reveal">
+  <div class="interstitial-inner">
+    <div class="interstitial-year violet">1856</div>
+    <p>An American scientist fills glass cylinders with different gases, places them in sunlight, and measures their temperatures.</p>
+    <p>The cylinder filled with carbon dioxide <strong>heats faster and stays hot longer</strong> than any of the others.</p>
+  </div>
+</div>
+
+<div class="scrolly">
+  <div class="sticky-pane">
+    <div class="vis-card photograph" id="pane-foote">
+      <img class="vis-img" id="pane-foote-img" src="" alt="">
+      <div class="vis-placeholder">
+        <svg class="vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9h6v6"/></svg>
+        <div class="vis-title" id="pane-foote-title">Placeholder</div>
+        <div class="vis-desc" id="pane-foote-desc">Eunice Newton Foote, 1856. The first demonstration that CO2 traps heat.</div>
+      </div>
+    </div>
+    <div class="source-chip fsa" id="chip-foote">American Journal of Science, 1856</div>
+  </div>
+  <div class="text-pane">
+
+    <div class="block on" data-pane="foote" data-vis="photograph" data-img="" data-title="Placeholder" data-desc="Eunice Newton Foote, 1856. The first person to demonstrate that CO2 traps heat." data-chip="fsa" data-chip-label="American Journal of Science, 1856">
+      <div class="block-date">1856</div>
+      <div class="block-hed">Eunice Newton Foote</div>
+      <div class="block-body">
+        <p>Her name was Eunice Newton Foote. She was a physicist, an inventor, and a signatory of the Seneca Falls Declaration on women's rights. Her paper — <em>"Circumstances Affecting the Heat of the Sun's Rays"</em> — was read aloud at the American Association for the Advancement of Science by a male colleague, because she was not permitted to present.</p>
+        <p>The paper described the first experimental evidence that carbon dioxide traps heat. It was published in the <em>American Journal of Science and Arts</em>. <strong>That was 1856.</strong> Abraham Lincoln had not yet been nominated for president.</p>
+        <span class="pull">The first person to demonstrate the greenhouse effect was an American woman who was not allowed to present her own findings.</span>
+      </div>
+    </div>
+
+    <div class="block" data-pane="foote" data-vis="photograph" data-img="images/V-seneca-falls-declaration-sentiments.jpg" data-title="Declaration of Sentiments" data-desc="Seneca Falls Convention, 1848. Foote was a signatory." data-chip="fsa" data-chip-label="Historical Record">
+      <div class="block-date">1856 → 1896</div>
+      <div class="block-hed">Forty years pass.</div>
+      <div class="block-body">
+        <p>Foote's experiment is largely forgotten. In 1861, the Irish physicist John Tyndall publishes more detailed measurements of how gases absorb heat — he is usually credited as the discoverer. Foote's priority is not widely recognized until the 2010s.</p>
+        <p>Then, in 1896, a Swedish chemist picks up where she left off.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── 1896: ARRHENIUS ────────────────────────────────────────── -->
+<div class="interstitial dark reveal">
+  <div class="interstitial-inner">
+    <div class="interstitial-year violet">1896</div>
+    <p>Svante Arrhenius publishes the first mathematical prediction of what fossil fuel combustion will do to the planet.</p>
+    <p>His estimate — roughly <strong>5°C of warming</strong> if atmospheric CO2 doubles — is within the range of modern climate models, <strong>130 years later.</strong></p>
+  </div>
+</div>
+
+<!-- ── 1910–1931: THE NEWSPAPERS ───────────────────────────────── -->
+<div class="scrolly">
+  <div class="sticky-pane">
+    <div class="vis-card newspaper" id="pane-press1">
+      <img class="vis-img" id="pane-press1-img" src="" alt="">
+      <div class="vis-placeholder">
+        <svg class="vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+        <div class="vis-title" id="pane-press1-title">Placeholder</div>
+        <div class="vis-desc" id="pane-press1-desc">The Leon Reporter, Leon, Iowa, March 24, 1910.</div>
+      </div>
+    </div>
+    <div class="source-chip ca" id="chip-press1">Chronicling America</div>
+  </div>
+  <div class="text-pane">
+
+    <div class="block on" data-pane="press1" data-vis="newspaper" data-img="images/N-leon-reporter-iowa-1910-03-24.jpg" data-title="The Leon Reporter" data-desc="Leon, Iowa, March 24, 1910. Page 3." data-chip="ca" data-chip-label="Chronicling America">
+      <div class="block-date">March 24, 1910</div>
+      <div class="block-hed">Leon, Iowa. Population: 1,891.</div>
+      <div class="block-body">
+        <p>A weekly newspaper in a farming town in southern Iowa publishes a short item about carbon dioxide and the atmosphere. The theory that burning coal could change the Earth's temperature has made it from a Swedish chemistry journal to page 3 of the <strong>Leon Reporter</strong>.</p>
+        <p>It's 1910. The Wright brothers flew seven years ago. There are two million cars in the United States. And a weekly in Iowa is printing about CO2.</p>
+      </div>
+    </div>
+
+    <div class="block" data-pane="press1" data-vis="newspaper" data-img="images/N-san-francisco-call-1913-07-27.jpg" data-title="The San Francisco Call" data-desc="San Francisco, July 27, 1913. Page 7." data-chip="ca" data-chip-label="Chronicling America">
+      <div class="block-date">July 27, 1913</div>
+      <div class="block-hed">San Francisco, California.</div>
+      <div class="block-body">
+        <p>The <strong>San Francisco Call</strong> runs a science column on page 7 covering the link between coal combustion, carbon dioxide, and temperature. One year earlier, a New Zealand newspaper had published a now-famous article on the same subject — sometimes cited as "the 1912 climate article."</p>
+        <p>The knowledge is circulating. Unevenly, inconsistently, but circulating — in newspapers that most Americans will never read, on pages they'll turn past on the way to the sports scores.</p>
+      </div>
+    </div>
+
+    <div class="block" data-pane="press1" data-vis="newspaper" data-img="images/N-seward-daily-gateway-alaska-1931-06-06.jpg" data-title="Seward Daily Gateway" data-desc="Seward, Alaska, June 6, 1931. Page 4." data-chip="ca" data-chip-label="Chronicling America">
+      <div class="block-date">June 6, 1931</div>
+      <div class="block-hed">Seward, Alaska.</div>
+      <div class="block-body">
+        <p>The <strong>Seward Daily Gateway</strong> — a newspaper in a town of 800 people on the coast of Alaska — publishes a dispatch about carbon dioxide and atmospheric warming.</p>
+        <p>Alaska. 1931. A territory, not yet a state. And someone is reading about what CO2 does to the atmosphere.</p>
+        <span class="pull">Sixty-two newspaper pages between 1896 and 1940 mention carbon dioxide and warming. Scattered across small-town papers from Iowa to Alaska. The knowledge was in the record.</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── 1936–1938: THE PHOTOGRAPHS AND THE PROOF ───────────────── -->
+<div class="interstitial dark reveal">
+  <div class="interstitial-inner">
+    <div class="interstitial-year violet">1936</div>
+    <p>While federal photographers are documenting the Dust Bowl, a British engineer is using American weather data to prove the warming is already happening.</p>
+    <p><strong>The photographs and the proof are being produced at the same time.</strong></p>
+  </div>
+</div>
+
+<div class="scrolly">
+  <div class="sticky-pane">
+    <div class="vis-card photograph" id="pane-dust">
+      <img class="vis-img" id="pane-dust-img" src="" alt="">
+      <div class="vis-placeholder">
+        <svg class="vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <div class="vis-title" id="pane-dust-title">Placeholder</div>
+        <div class="vis-desc" id="pane-dust-desc">Dust storm, Cimarron County, Oklahoma, 1936. Arthur Rothstein / FSA.</div>
+      </div>
+    </div>
+    <div class="source-chip fsa" id="chip-dust">FSA Photograph</div>
+  </div>
+  <div class="text-pane">
+
+    <div class="block on" data-pane="dust" data-vis="photograph" data-img="images/V-dust-storm-cimarron-county-oklahoma.jpg" data-title="Cimarron County, Oklahoma" data-desc="Farmer and sons in dust storm, April 1936. Arthur Rothstein / FSA." data-chip="fsa" data-chip-label="FSA Photograph">
+      <div class="block-date">April 1936</div>
+      <div class="block-hed">A farmer walks into a dust storm with his two sons.</div>
+      <div class="block-body">
+        <p>Arthur Rothstein took this photograph in Cimarron County, Oklahoma. The soil had been stripped by a decade of industrial farming and drought. It was blowing away. The image became one of the defining photographs of the twentieth century.</p>
+        <p>The Dust Bowl displaced 2.5 million people. It was a climate disaster — drought, heat, soil collapse — before anyone used that language.</p>
+      </div>
+    </div>
+
+    <div class="block" data-pane="dust" data-vis="photograph" data-img="images/V-dorothea-lange-drought-refugees.jpg" data-title="Drought Refugees" data-desc="Dorothea Lange: Drought refugees from Oklahoma, Blythe, California, 1936." data-chip="fsa" data-chip-label="FSA Photograph">
+      <div class="block-date">1936</div>
+      <div class="block-hed">They were climate refugees before the term existed.</div>
+      <div class="block-body">
+        <p>Dorothea Lange photographed Oklahoma families arriving in Blythe, California. Walker Evans documented eroded farmland in Alabama. Together with Rothstein and others, they produced <strong>175,000 photographs</strong> — the most comprehensive visual record of environmental devastation in American history.</p>
+        <p>Decades later, climate scientists would point to the Dust Bowl as a preview of what warming would bring: more drought, more displacement, more soil turning to dust.</p>
+      </div>
+    </div>
+
+    <div class="block" data-pane="dust" data-vis="photograph" data-img="images/V-weather-bureau-map-force-1924.jpg" data-title="U.S. Weather Bureau" data-desc="Weather Bureau map force, c. 1924. Callendar used their data to prove the warming." data-chip="fsa" data-chip-label="U.S. Weather Bureau">
+      <div class="block-date">1938</div>
+      <div class="block-hed">Guy Callendar proves it.</div>
+      <div class="block-body">
+        <p>While the Dust Bowl is still burying farms, a British steam engineer named Guy Stewart Callendar compiles temperature records from 147 weather stations around the world — many of them operated by the <strong>U.S. Weather Bureau.</strong></p>
+        <p>His conclusion: the planet had warmed by 0.3°C since the 1880s, and the cause was carbon dioxide from burning coal and oil. He publishes in 1938. The paper is received politely and mostly ignored.</p>
+        <span class="pull">The photographer and the engineer never met. But the federal weather stations that tracked the Dust Bowl storms also supplied the data that proved the warming was real.</span>
+        <p>The photographs. The weather data. The mathematical proof. All produced in the same decade, all eventually filed in the same archive. <strong>And then — eighty years of separation.</strong> The photos went to the picture files. The weather data went to the agencies. The proof went to the journals. Nobody read them together.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── 1957–1958: THE DECADE THE SCIENCE HARDENED ─────────────── -->
+<div class="interstitial dark reveal">
+  <div class="interstitial-inner">
+    <div class="interstitial-year violet">1957</div>
+    <p>Roger Revelle declares that humanity is running a <em>"large scale geophysical experiment"</em> on the atmosphere. Charles Keeling begins measuring CO2 at Mauna Loa.</p>
+    <p>And in Washington, a newspaper is paying attention.</p>
+  </div>
+</div>
+
+<div class="scrolly">
+  <div class="sticky-pane">
+    <div class="vis-card newspaper" id="pane-star">
+      <img class="vis-img" id="pane-star-img" src="" alt="">
+      <div class="vis-placeholder">
+        <svg class="vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+        <div class="vis-title" id="pane-star-title">Placeholder</div>
+        <div class="vis-desc" id="pane-star-desc">Evening Star, Washington DC, January 26, 1958, page 23.</div>
+      </div>
+    </div>
+    <div class="source-chip ca" id="chip-star">Chronicling America</div>
+  </div>
+  <div class="text-pane">
+
+    <div class="block on" data-pane="star" data-vis="newspaper" data-img="images/N-evening-star-dc-1958-01-26-mystery-warming-world.jpg" data-title="Evening Star" data-desc="Washington DC, January 26, 1958. Page 23." data-chip="ca" data-chip-label="Chronicling America">
+      <div class="block-date">January 26, 1958</div>
+      <div class="block-hed ember">"Mystery of the Warming World"</div>
+      <div class="block-body">
+        <p>Page 23 of the <strong>Evening Star</strong> — Washington DC's daily newspaper, the paper read by members of Congress, by agency officials, by the staffers who would draft the PSAC report seven years later.</p>
+        <p>A feature by John Stark. The headline: <em>"Mystery of the Warming World."</em> An article explaining, clearly and explicitly, that carbon dioxide from fossil fuels was heating the planet.</p>
+        <span class="pull">Seven years before the warning reached the White House, it was on page 23 of the Washington paper — between the department store ads and the TV listings.</span>
+      </div>
+    </div>
+
+    <div class="block" data-pane="star" data-vis="newspaper" data-img="images/N-atlanta-daily-world-1956-09-01.jpg" data-title="Atlanta Daily World" data-desc="Atlanta, September 1, 1956. Climate science in the Black press." data-chip="ca" data-chip-label="Chronicling America">
+      <div class="block-date">1955–1965</div>
+      <div class="block-hed">Four pages in ten years.</div>
+      <div class="block-body">
+        <p>In the entire decade before the government was formally warned, <strong>four newspaper pages</strong> in the digitized record mention carbon dioxide and atmospheric warming.</p>
+        <p>Two are from the Evening Star. Two are from Black newspapers — the <strong>Atlanta Daily World</strong> in 1956 and the <strong>Jackson Advocate</strong> in Mississippi in 1957 — covering climate science during Jim Crow.</p>
+        <p>The science had narrowed to a trickle. Sixty-two pages in 44 years became four pages in ten. The knowledge was receding from public view just as it was accelerating inside the institutions.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CHAPTER II — THE GOVERNMENT CATCHES UP                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="ch-head" id="ch2">
+  <div class="ch-label">Chapter II</div>
+  <h2 class="ch-title">The Government Catches Up</h2>
+  <p class="ch-sub">In 1965, the White House finally reads what the archive already held.</p>
+</div>
+
+<div class="scrolly">
+  <div class="sticky-pane">
+    <div class="vis-card photograph" id="pane-psac">
+      <img class="vis-img" id="pane-psac-img" src="" alt="">
+      <div class="vis-placeholder">
+        <svg class="vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <div class="vis-title" id="pane-psac-title">Placeholder</div>
+        <div class="vis-desc" id="pane-psac-desc">PSAC Report, November 1965. 317 pages. Delivered to President Johnson.</div>
+      </div>
+    </div>
+    <div class="source-chip congress" id="chip-psac">Congressional Record</div>
+  </div>
+  <div class="text-pane">
+
+    <div class="block on" data-pane="psac" data-vis="photograph" data-title="Placeholder" data-desc="PSAC Report, November 1965: 'Restoring the Quality of Our Environment.' 317 pages." data-chip="congress" data-chip-label="Congressional Record">
+      <div class="block-date">November 1965</div>
+      <div class="block-hed violet">317 pages.</div>
+      <div class="block-body">
+        <p><em>Restoring the Quality of Our Environment.</em> The President's Science Advisory Committee delivers its report. A 22-page appendix on atmospheric CO2 — chaired by Roger Revelle, the same scientist who had raised the alarm a decade earlier — predicts a <strong>25% increase in atmospheric CO2 by the year 2000.</strong></p>
+        <p>The prediction is almost exactly right.</p>
+        <p>The report is transmitted to Congress. Johnson sends an accompanying special message on conservation. Everything Foote demonstrated in 1856, everything Arrhenius calculated in 1896, everything Callendar proved in 1938 — it is now an official warning on the desk of the President of the United States.</p>
+        <span class="pull">It took 109 years from Eunice Foote's experiment to a presidential warning. The archive held the evidence the entire time.</span>
+      </div>
+    </div>
+
+    <div class="block" data-pane="psac" data-vis="dark" data-title="" data-desc="" data-chip="hidden" data-chip-label="">
+      <div class="block-date">February 8, 1965</div>
+      <div class="block-hed ember">How many newspapers covered it?</div>
+      <div class="block-body">
+        <p>The President sends a special message to Congress. His own scientists have warned him. He transmits their findings to the legislative branch.</p>
+        <p>In the surviving newspaper record: <strong>one page.</strong></p>
+        <p>One.</p>
+        <span class="pull ember">A century of evidence reaches the White House. The newspaper record shows one page.</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- THE SILENCE                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="divider ember"></div>
+<section id="silence" class="silence reveal">
+  <div class="silence-inner">
+    <div class="silence-years">1966<span class="silence-dash"></span>1987</div>
+    <h2>Then — nothing.</h2>
+    <p>The government kept studying the problem. The Charney Report in 1979. The EPA warning in 1983. Congressional hearings. Agency reports. <strong>The institutional record grew.</strong></p>
+    <p>The newspaper record did not.</p>
+    <div class="silence-grid">
+      <div class="s-stat"><div class="num">1</div><div class="lab">newspaper page<br>mentioning "CO2"<br>+ "climate," 1960–75</div></div>
+      <div class="s-stat"><div class="num">1</div><div class="lab">newspaper page<br>mentioning "global<br>warming" before 1988</div></div>
+      <div class="s-stat"><div class="num">4</div><div class="lab">newspaper pages<br>mentioning "greenhouse<br>effect," 1960–87</div></div>
+    </div>
+    <p>Everyone in the chain — the scientists, the agencies, the committees — assumed someone else was telling the public. <strong>No one was.</strong> Social scientists call this <strong>pluralistic ignorance</strong>: everyone privately holds information that the group fails to act on, because each person assumes the others already know.</p>
+    <p>The American climate record is pluralistic ignorance written in paper and microfilm.</p>
+    <p class="silence-caveat">Chronicling America's digitization thins after ~1963. These counts are most reliable for earlier decades, but even accounting for gaps, the contrast with the institutional record is stark.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CHAPTER III — THE SILENCE BREAKS                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<div class="ch-head" id="ch3">
+  <div class="ch-label ember">Chapter III</div>
+  <h2 class="ch-title">The Silence Breaks</h2>
+  <p class="ch-sub">June 23, 1988. The hottest day of the year.</p>
+</div>
+
+<div class="scrolly">
+  <div class="sticky-pane">
+    <div class="vis-card photograph" id="pane-hansen">
+      <img class="vis-img" id="pane-hansen-img" src="" alt="">
+      <div class="vis-placeholder">
+        <svg class="vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <div class="vis-title" id="pane-hansen-title">Placeholder</div>
+        <div class="vis-desc" id="pane-hansen-desc">Senate hearing room, June 23, 1988.</div>
+      </div>
+    </div>
+    <div class="source-chip congress" id="chip-hansen">Congressional Record</div>
+  </div>
+  <div class="text-pane">
+
+    <div class="block on" data-pane="hansen" data-vis="photograph" data-title="Placeholder" data-desc="Senate hearing room, June 23, 1988." data-chip="congress" data-chip-label="Congressional Record">
+      <div class="block-date">June 23, 1988</div>
+      <div class="block-hed">James Hansen says it out loud.</div>
+      <div class="block-body">
+        <p>Senator Tim Wirth schedules the hearing for what he expects to be the hottest day of the year. The night before, he has the windows opened so the air conditioning can't keep up.</p>
+        <p>James Hansen, a NASA climatologist, tells the Senate Committee on Energy and Natural Resources that global warming has already begun. He is <strong>99% certain.</strong></p>
+        <p>The science he presents is not new. It is what Foote demonstrated in 1856, what Arrhenius calculated in 1896, what Callendar proved in 1938, what the PSAC told Johnson in 1965 — updated with 23 more years of data confirming the prediction. But this time the press is in the room. This time, the front pages carry it.</p>
+        <span class="pull">Hansen didn't discover climate change. He said out loud what the record had held for 132 years.</span>
+      </div>
+    </div>
+
+    <div class="block" data-pane="hansen" data-vis="dark" data-title="" data-desc="" data-chip="hidden" data-chip-label="">
+      <div class="block-date">1856 → 1988</div>
+      <div class="block-hed ember">132 years.</div>
+      <div class="block-body">
+        <p>From Eunice Foote's glass cylinders to James Hansen's Senate testimony. From a woman who wasn't allowed to present her own paper to a man on the front page of the New York Times.</p>
+        <p>Between them: a century and a third of evidence. Weather records, newspaper columns, photographs, journal articles, government reports. All of it filed, cataloged, preserved. None of it read together.</p>
+        <p>This is not a story about scientific failure — the scientists did their work. It is not a story about government negligence — the government commissioned the studies and received the findings. It is a story about <strong>what happens when knowledge stays inside institutions and never reaches the people those institutions serve.</strong></p>
+        <span class="pull ember">The record holds the knowledge and the silence. Both are in the same building.</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════ CONVERGENCE ═══════════ -->
+<section class="convergence reveal">
+  <div class="convergence-inner">
+    <div class="convergence-year">2026</div>
+    <p><em>What Did They Know?</em> is an archival investigation told through the documents themselves — an 1856 experiment, small-town newspapers, Dust Bowl photographs, a presidential report, and twenty-two years of silence.</p>
+    <p>The story is not about what the record lacks. It is about <strong>what was always there</strong>, waiting to be read together for the first time.</p>
+  </div>
+</section>
+
+<!-- ═══════════ CLOSER ═══════════ -->
+<section class="closer">
+  <div class="closer-inner">
+    <h2>A Proposal for the Library of Congress<br>Innovator in Residence Program</h2>
+    <p><em>What Did They Know?</em> proposes a scrollytelling experience built from congressional records, digitized newspapers, and federal photographs — reading the American archive against itself to make visible the 132-year gap between evidence and action on the defining issue of the century.</p>
+    <a href="https://www.sitara.systems" class="cta-btn" target="_blank" rel="noopener">Sitara Systems <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M4.5 2a.5.5 0 0 0 0 1h6.793L2.146 12.146a.5.5 0 0 0 .708.708L12 3.707V10.5a.5.5 0 0 0 1 0v-9a.5.5 0 0 0-.5-.5h-8z"/></svg></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <a href="https://www.sitara.systems" class="footer-logo" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13.5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="1.2 3.8" stroke-linecap="round"/><circle cx="7" cy="18" r="3.2" fill="currentColor"/><circle cx="24" cy="10" r="3.8" fill="currentColor"/></svg> Sitara Systems</a>
+  <div class="footer-note">Draft prototype · BAA 030ADV26R0021 · Library of Congress Innovator in Residence 2026</div>
+</footer>
+
+<script>
+  const blockObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.closest('.text-pane').querySelectorAll('.block').forEach(b => b.classList.remove('on'));
+      e.target.classList.add('on');
+      const pid = e.target.dataset.pane; if (!pid) return;
+      const card = document.getElementById('pane-' + pid);
+      const titleEl = document.getElementById('pane-' + pid + '-title');
+      const descEl = document.getElementById('pane-' + pid + '-desc');
+      const imgEl = document.getElementById('pane-' + pid + '-img');
+      const chip = document.getElementById('chip-' + pid);
+      const vis = e.target.dataset.vis || 'photograph';
+      if (card) {
+        card.className = 'vis-card ' + vis;
+        if (titleEl) titleEl.textContent = e.target.dataset.title || '';
+        if (descEl) descEl.textContent = e.target.dataset.desc || '';
+        // Swap image
+        const imgSrc = e.target.dataset.img || '';
+        if (imgEl) {
+          if (imgSrc) {
+            imgEl.src = imgSrc;
+            imgEl.alt = e.target.dataset.desc || '';
+            imgEl.classList.add('active');
+            card.classList.add('has-img');
+          } else {
+            imgEl.classList.remove('active');
+            card.classList.remove('has-img');
+          }
+        }
+      }
+      if (chip) { chip.className = 'source-chip ' + (e.target.dataset.chip || ''); chip.textContent = e.target.dataset.chipLabel || ''; }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.block').forEach(b => blockObs.observe(b));
+  const revObs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } }); }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+  let ticking = false;
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(() => { document.querySelector('.nav').style.borderBottomColor = scrollY > 80 ? 'rgba(150,125,255,0.2)' : 'rgba(150,125,255,0.12)'; ticking = false; }); ticking = true; } });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LC Innovator in Residence | Concept Demos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: #0a0a12;
+      color: #e0dff0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .brand {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #967DFF;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      color: #9996b0;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .cards { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; max-width: 700px; }
+    .card {
+      flex: 1 1 280px;
+      max-width: 320px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(150,125,255,0.15);
+      border-radius: 12px;
+      padding: 1.8rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      border-color: rgba(150,125,255,0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(150,125,255,0.12);
+    }
+    .card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .card p { font-size: 0.88rem; color: #9996b0; line-height: 1.55; }
+    .card .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      margin-bottom: 0.8rem;
+    }
+    .tag-interp { background: rgba(150,125,255,0.15); color: #b8a9ff; }
+    .tag-disc  { background: rgba(250,148,27,0.15); color: #f0b060; }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.78rem;
+      color: #55536a;
+    }
+    footer a { color: #967DFF; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="brand">Sitara Systems</div>
+  <h1>Library of Congress IIR Concepts</h1>
+  <p class="subtitle">Concept demos for the Innovator in Residence program</p>
+  <div class="cards">
+    <a href="hidden-in-plain-sight/" class="card">
+      <span class="tag tag-interp">Interpretation</span>
+      <h2>Hidden in Plain Sight</h2>
+      <p>Tracing the invisible migrations of South Asian and Latin American communities through the Library's digital collections.</p>
+    </a>
+    <a href="what-did-they-know/" class="card">
+      <span class="tag tag-disc">Discovery</span>
+      <h2>What Did They Know?</h2>
+      <p>Uncovering early climate science reporting in historical newspapers from the Library's Chronicling America archive.</p>
+    </a>
+  </div>
+  <footer><a href="https://www.sitara.systems">sitara.systems</a> &middot; 2026</footer>
+</body>
+</html>

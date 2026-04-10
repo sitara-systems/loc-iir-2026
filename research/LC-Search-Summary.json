@@ -1,0 +1,571 @@
+{
+  "generated": "2026-03-22T21:23:56.140663",
+  "searches": [
+    {
+      "label": "1B-01 | FSA/OWI: Mexican railroad workers, Idaho",
+      "notes": "Visual documentation of Mexican labor in Idaho railroad corridor",
+      "api": "loc",
+      "query": "mexican railroad workers idaho",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-02 | FSA/OWI: Railroad section gang Southwest",
+      "notes": "Section gangs = the labor category the Nino family likely falls under",
+      "api": "loc",
+      "query": "railroad section gang southwest laborers",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-03 | FSA/OWI: Railroad outfit car / labor camp",
+      "notes": "Outfit cars = the mobile homes the family lived in 1927-1930",
+      "api": "loc",
+      "query": "railroad outfit car labor camp workers",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-04 | FSA/OWI: Azusa / San Gabriel Valley California",
+      "notes": "Family settled at 140 Pasadena Ave, Azusa by 1930 census",
+      "api": "loc",
+      "query": "Azusa California labor workers",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-05 | FSA/OWI: San Gabriel Canyon dam construction",
+      "notes": "Felipe Nino likely worked Morris Dam, San Gabriel Canyon, ~1930-1935",
+      "api": "loc",
+      "query": "San Gabriel Canyon dam construction laborers California",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-06 | Chronicling America (Spanish): Repatriaci\u00f3n 1929-1936",
+      "notes": "Spanish-language coverage of Mexican Repatriation \u2014 La Prensa, La Opini\u00f3n",
+      "api": "ca",
+      "query": "repatriacion mexicanos",
+      "total_results": 114,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 2 of El Tucsonense (Tucson, Ariz.), October 6, 1936",
+          "url": "https://www.loc.gov/resource/sn95060694/1936-10-06/ed-1/?sp=2&q=repatriacion+mexicanos"
+        },
+        {
+          "title": "Image 4 of El Tucsonense (Tucson, Ariz.), April 17, 1936",
+          "url": "https://www.loc.gov/resource/sn95060694/1936-04-17/ed-1/?sp=4&q=repatriacion+mexicanos"
+        },
+        {
+          "title": "Image 3 of La opinio\u0301n (Los Angeles, Calif.), March 5, 1933",
+          "url": "https://www.loc.gov/resource/sn81004351/1933-03-05/ed-1/?sp=3&q=repatriacion+mexicanos"
+        }
+      ]
+    },
+    {
+      "label": "1B-07 | Chronicling America (Spanish): Deportaci\u00f3n California 1929-1936",
+      "notes": "California Spanish-language press coverage of deportation/repatriation",
+      "api": "ca",
+      "query": "deportacion California",
+      "total_results": 74,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 2 of La opinio\u0301n (Los Angeles, Calif.), June 24, 1929",
+          "url": "https://www.loc.gov/resource/sn81004351/1929-06-24/ed-1/?sp=2&q=deportacion+california"
+        },
+        {
+          "title": "Image 10 of La opinio\u0301n (Los Angeles, Calif.), June 21, 1929",
+          "url": "https://www.loc.gov/resource/sn81004351/1929-06-21/ed-1/?sp=10&q=deportacion+california"
+        },
+        {
+          "title": "Image 4 of La opinio\u0301n (Los Angeles, Calif.), June 30, 1929",
+          "url": "https://www.loc.gov/resource/sn81004351/1929-06-30/ed-1/?sp=4&q=deportacion+california"
+        }
+      ]
+    },
+    {
+      "label": "1B-08 | Chronicling America (Spanish): Ferrocarril workers 1920-1935",
+      "notes": "Spanish coverage of Mexican railroad workers",
+      "api": "ca",
+      "query": "ferrocarril trabajadores mexicanos",
+      "total_results": 398,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 5 of El Tucsonense (Tucson, Ariz.), January 29, 1921",
+          "url": "https://www.loc.gov/resource/sn95060694/1921-01-29/ed-1/?sp=5&q=ferrocarril+trabajadores+mexicanos"
+        },
+        {
+          "title": "Image 1 of El Tucsonense (Tucson, Ariz.), March 5, 1931",
+          "url": "https://www.loc.gov/resource/sn95060694/1931-03-05/ed-1/?sp=1&q=ferrocarril+trabajadores+mexicanos"
+        },
+        {
+          "title": "Image 1 of El Tucsonense (Tucson, Ariz.), August 29, 1922",
+          "url": "https://www.loc.gov/resource/sn95060694/1922-08-29/ed-1/?sp=1&q=ferrocarril+trabajadores+mexicanos"
+        }
+      ]
+    },
+    {
+      "label": "1B-09 | Maps: El Paso to Idaho railroad corridor",
+      "notes": "Rail corridor the family traveled \u2014 El Paso to Idaho 1927",
+      "api": "loc",
+      "query": "railroad map El Paso Idaho Pacific",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-10 | Maps: Southern Pacific Railroad Southwest",
+      "notes": "Southern Pacific operated main lines through this corridor",
+      "api": "loc",
+      "query": "Southern Pacific Railroad map Southwest 1920",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-13 | LOC General: Morris Dam San Gabriel Canyon",
+      "notes": "Felipe Nino oral history says he bicycled to work \u2014 Morris Dam is the site, ~10 miles up San Gabriel Canyon from Azusa",
+      "api": "loc",
+      "query": "Morris Dam San Gabriel Canyon construction 1930",
+      "total_results": 2786,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "California - White Pages and Yellow Pages - San Francisco - November 1927 thru November 1930",
+          "url": "https://www.loc.gov/item/usteledirec03386/"
+        },
+        {
+          "title": "California - White Pages and Yellow Pages - San Diego County - May 1930 thru June 1931",
+          "url": "https://www.loc.gov/item/usteledirec03273/"
+        },
+        {
+          "title": "[Jul. 1930] Motion picture projectionist ...",
+          "url": "https://www.loc.gov/item/35023118/resource/gdcmassbookdig.motionpicturepro03manc-1930-07"
+        }
+      ]
+    },
+    {
+      "label": "1B-14 | Chronicling America (Spanish): La Prensa San Antonio railroad",
+      "notes": "La Prensa (San Antonio) was the major Spanish-language paper covering the El Paso corridor; TX state filter targets it",
+      "api": "ca",
+      "query": "ferrocarril trabajadores mexicanos",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1B-11 | LOC General: Mexican Repatriation congressional record",
+      "notes": "Congressional debate and documentation of the Repatriation",
+      "api": "loc",
+      "query": "Mexican Repatriation deportation Congress 1930",
+      "total_results": 593,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Land of necessity : consumer culture in the United States-Mexico borderlands",
+          "url": "https://www.loc.gov/item/2020717906/"
+        },
+        {
+          "title": "Immigration and Migration | Historical Topics | Articles and Essays | The Library of Congress Celebrates the Songs of America | Digital Collections",
+          "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/historical-topics/immigration-and-migration/"
+        },
+        {
+          "title": "Are we not foreigners here? : Indigenous nationalism in the U.S.-Mexico borderlands",
+          "url": "https://www.loc.gov/item/2020719626/"
+        }
+      ]
+    },
+    {
+      "label": "1B-12 | LOC General: Immigration Act 1924 Mexican exemption",
+      "notes": "The provision exempting Western Hemisphere from quotas \u2014 why the Nino family could cross",
+      "api": "loc",
+      "query": "Immigration Act 1924 Mexican exemption Western Hemisphere",
+      "total_results": 1009,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "The Struggle for Fairness: National Origin Quotas and the Immigration Act of 1965",
+          "url": "https://www.loc.gov/item/2021689904/"
+        },
+        {
+          "title": "Japanese exclusion: A study of the policy and the law, by John B. Trevor, M.A. formerly captain, Military Intelligence Division, U.S.A., Chevalier de la Legion d'Honneur. Submitted to the Committee on Immigration and Naturalization, House of Representatives, January 8, 1925. February 4, 1925. -- Ordered to be printed",
+          "url": "https://www.loc.gov/item/2024892262/"
+        },
+        {
+          "title": "Restriction of immigration. March 24, 1924. -- Committed to the Committee of the Whole House on the State of the Union and ordered to be printed",
+          "url": "https://www.loc.gov/item/2025848681/"
+        }
+      ]
+    },
+    {
+      "label": "1A-01 | LOC General: Bhagat Singh Thind case",
+      "notes": "The 1923 Supreme Court case that closed the racial eligibility door",
+      "api": "loc",
+      "query": "Bhagat Singh Thind naturalization Supreme Court",
+      "total_results": 9,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "U.S. Reports: United States v. Thind, 261 U.S. 204 (1923).",
+          "url": "https://www.loc.gov/item/usrep261204/"
+        },
+        {
+          "title": "U.S. Reports: New England Divisions Case, 261 U.S. 184 (1923).",
+          "url": "https://www.loc.gov/item/usrep261184/"
+        },
+        {
+          "title": "Asian Americans in the Military",
+          "url": "https://blogs.loc.gov/law/2022/11/asian-americans-in-the-military/"
+        }
+      ]
+    },
+    {
+      "label": "1A-02 | Chronicling America: Thind case coverage 1922-1924",
+      "notes": "Newspaper coverage of the Thind decision \u2014 how widely reported?",
+      "api": "ca",
+      "query": "Thind naturalization Hindu white",
+      "total_results": 2,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 3 of Seward daily gateway (Seward, Alaska), March 13, 1923",
+          "url": "https://www.loc.gov/resource/sn87062169/1923-03-13/ed-1/?sp=3&q=thind+naturalization+hindu+white"
+        },
+        {
+          "title": "Image 1 of The northwestern bulletin (St. Paul, Minn. ; Minneapolis, Minn.), March 3, 1923",
+          "url": "https://www.loc.gov/resource/sn90060931/1923-03-03/ed-1/?sp=1&q=thind+naturalization+hindu+white"
+        },
+        {
+          "title": "Image 4 of The daily star-mirror (Moscow, Idaho), April 17, 1923",
+          "url": "https://www.loc.gov/resource/sn89055128/1923-04-17/ed-1/?sp=4&q=thind+naturalization+hindu+white"
+        }
+      ]
+    },
+    {
+      "label": "1A-03 | LOC General: South Asian naturalization British subject white",
+      "notes": "The legal argument Mohaiyuddin used \u2014 British colonial status as whiteness",
+      "api": "loc",
+      "query": "Hindu naturalization British subject white citizenship 1910 1920",
+      "total_results": 791,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Hearing before Committee on Immigration and Naturalization, House of Representatives, 61st Congress [January 20-May 21, 1910] : hearings ...",
+          "url": "https://www.loc.gov/item/10035897/"
+        },
+        {
+          "title": "New Britain herald (New Britain, Conn.), October 28, 1920",
+          "url": "https://www.loc.gov/item/sn82014519/1920-10-28/ed-1/"
+        },
+        {
+          "title": "White Pine news weekly mining review (East Ely, Nev.), March 16, 1919",
+          "url": "https://www.loc.gov/item/sn86076354/1919-03-16/ed-1/"
+        }
+      ]
+    },
+    {
+      "label": "1A-04 | LOC General: Commissioner General Immigration Annual Reports",
+      "notes": "Annual reports document naturalization patterns \u2014 may track British Guiana / Hindu petitions",
+      "api": "loc",
+      "query": "Commissioner General Immigration Annual Report 1913 1919 South Asian",
+      "total_results": 4711,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "The new map of Asia (1900-1919)",
+          "url": "https://www.loc.gov/item/31023273/"
+        },
+        {
+          "title": "Annual report",
+          "url": "https://www.loc.gov/item/08036842/"
+        },
+        {
+          "title": "[1916-1922 - Copy 1] The Annual report of the Connecticut Historical Society",
+          "url": "https://www.loc.gov/item/06013597/resource/gdcmassbookdig.annualreportofco01conn"
+        }
+      ]
+    },
+    {
+      "label": "1A-05 | LOC General: Dillingham Commission immigration report",
+      "notes": "1910-1911 commission report that set the stage for the 1924 Act",
+      "api": "loc",
+      "query": "Dillingham Commission immigration report East Indian",
+      "total_results": 5316,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Reports of the Immigration Commission. Abstracts of reports of the Immigration Commission. (In two volumes ; Vol. II.) Presented by Mr. Dillingham. December 5, 1910. -- Referred to the Committee on Immigration and ordered to be printed, with illustrations",
+          "url": "https://www.loc.gov/item/2024874182/"
+        },
+        {
+          "title": "Reports of the Immigration Commission. Immigration and crime. Presented by Mr. Dillingham. December 5, 1910. -- Referred to the Committee on Immigration and ordered to be printed, with illustrations",
+          "url": "https://www.loc.gov/item/2024874191/"
+        },
+        {
+          "title": "Reports of the Immigration Commission. Abstracts of reports of the Immigration Commission with conclusions and recommendations and views of the minority. (In two volumes: Vol. I). Presented by Mr. Dillingham. December 5, 1910. --Referred to the Committee on Immigration and ordered to be printed, with illustrations",
+          "url": "https://www.loc.gov/item/2024874181/"
+        }
+      ]
+    },
+    {
+      "label": "1A-06 | Chronicling America: British Guiana immigrants New York 1910-1925",
+      "notes": "Coverage of the Indo-Caribbean community Mohaiyuddin was part of",
+      "api": "ca",
+      "query": "British Guiana New York immigrant",
+      "total_results": 44,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 4 of Greene County herald (Leakesville, Miss.), October 27, 1922",
+          "url": "https://www.loc.gov/resource/sn87065327/1922-10-27/ed-1/?sp=4&q=british+guiana+new+york+immigrant"
+        },
+        {
+          "title": "Image 2 of The Hawaiian gazette (Honolulu [Oahu, Hawaii]), July 12, 1910",
+          "url": "https://www.loc.gov/resource/sn83025121/1910-07-12/ed-1/?sp=2&q=british+guiana+new+york+immigrant"
+        },
+        {
+          "title": "Image 1 of The Pacific commercial advertiser (Honolulu, Hawaiian Islands), July 9, 1910",
+          "url": "https://www.loc.gov/resource/sn85047084/1910-07-09/ed-1/?sp=1&q=british+guiana+new+york+immigrant"
+        }
+      ]
+    },
+    {
+      "label": "1A-07 | LOC General: 1924 Immigration Act committee hearings",
+      "notes": "Congressional hearings where racial eligibility provisions were debated",
+      "api": "loc",
+      "query": "Immigration Act 1924 House Committee hearings Johnson-Reed",
+      "total_results": 10706,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Restriction of immigration. February 9, 1924, Report [Part 1]",
+          "url": "https://www.loc.gov/item/2025848592/"
+        },
+        {
+          "title": "Proposed child labor amendments to the Constitution of the United States. Hearings before the Committee on the Judiciary, House of Representatives, Sixty-eighth Congress, first session, February 7, 15, 16, 27, 28, and 29, 1924, March 1, 6, 7, and 8, 1924, Serial 16. December 18, 1924. -- Ordered to be printed",
+          "url": "https://www.loc.gov/item/2024892257/"
+        },
+        {
+          "title": "Amending sections 2, 13 and 14 of the Seamen's act. Hearings before the Committee on the merchant marine and fisheries, House of representatives, Sixty-seventh Congress, first session, on H.R. 3716",
+          "url": "https://www.loc.gov/item/44027830/"
+        }
+      ]
+    },
+    {
+      "label": "1A-08 | LOC General: Mohaiyuddin Khan direct name search",
+      "notes": "Direct name search \u2014 naturalized US citizen Brooklyn 1919, trader, born British Guiana 1888",
+      "api": "loc",
+      "query": "Mohaiyuddin Khan",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1A-09 | LOC General: Gool Mohamed Khan direct name search",
+      "notes": "Mohaiyuddin's father \u2014 may appear in immigration/trade records; family name variant",
+      "api": "loc",
+      "query": "Gool Mohamed Khan",
+      "total_results": 47,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Cabool: a personal narrative of a journey to, and residence in that city, in the years 1836, 7, and 8.",
+          "url": "https://www.loc.gov/item/05003144/"
+        },
+        {
+          "title": "Cabool : a personal narrative of a journey to, and residence in that city, in the years 1836, 7, and 8",
+          "url": "https://www.loc.gov/item/05003143/"
+        },
+        {
+          "title": "History of the war in Afghanistan.",
+          "url": "https://www.loc.gov/item/05003441/"
+        }
+      ]
+    },
+    {
+      "label": "1A-10 | Chronicling America: Khan naturalization Brooklyn 1919",
+      "notes": "Brooklyn naturalization court proceedings and coverage \u2014 may catch the Thind-era denaturalization wave too",
+      "api": "ca",
+      "query": "Khan naturalization Brooklyn British Guiana",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "1A-11 | LOC General: British Guiana immigration New York 1910-1920",
+      "notes": "Indo-Caribbean immigration to New York \u2014 the community Mohaiyuddin was part of; NARA coordinate to LC context",
+      "api": "loc",
+      "query": "British Guiana New York immigration naturalization 1910 1919",
+      "total_results": 349,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "The New York herald (New York [N.Y.]), January 20, 1912",
+          "url": "https://www.loc.gov/item/sn83030313/1912-01-20/ed-1/"
+        },
+        {
+          "title": "The New York herald (New York [N.Y.]), January 31, 1912",
+          "url": "https://www.loc.gov/item/sn83030313/1912-01-31/ed-1/"
+        },
+        {
+          "title": "The New York herald (New York [N.Y.]), January 3, 1912",
+          "url": "https://www.loc.gov/item/sn83030313/1912-01-03/ed-1/"
+        }
+      ]
+    },
+    {
+      "label": "2-01 | LOC General: PSAC 1965 atmospheric carbon dioxide report",
+      "notes": "First federal acknowledgment of climate risk \u2014 the smoking gun document",
+      "api": "loc",
+      "query": "President Science Advisory Committee carbon dioxide atmosphere 1965",
+      "total_results": 751,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "EPA Science Advisory Board",
+          "url": "https://www.loc.gov/item/2024769213/"
+        },
+        {
+          "title": "TSCA Science Advisory Committee on Chemicals",
+          "url": "https://www.loc.gov/item/2024769421/"
+        },
+        {
+          "title": "Clean Air Scientific Advisory Committee",
+          "url": "https://www.loc.gov/item/2024769212/"
+        }
+      ]
+    },
+    {
+      "label": "2-02 | LOC General: LBJ 1965 conservation message to Congress",
+      "notes": "LBJ's February 1965 message to Congress explicitly mentioning atmospheric CO2",
+      "api": "loc",
+      "query": "Lyndon Johnson conservation natural beauty message Congress 1965",
+      "total_results": 649,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "California - White Pages - Oakland - June 1965",
+          "url": "https://www.loc.gov/item/usteledirec02845/"
+        },
+        {
+          "title": "California - White Pages - Alhambra - December 1965",
+          "url": "https://www.loc.gov/item/usteledirec01374/"
+        },
+        {
+          "title": "Maryland - White Pages - Baltimore - December 1965",
+          "url": "https://www.loc.gov/item/usteledirec05158/"
+        }
+      ]
+    },
+    {
+      "label": "2-03 | LOC General: Roger Revelle carbon dioxide congressional testimony",
+      "notes": "Revelle testified multiple times on CO2 \u2014 key scientific witness",
+      "api": "loc",
+      "query": "Roger Revelle carbon dioxide Congress testimony climate",
+      "total_results": 22,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "U.S. Statutes at Large, Volume 38 (1913-1915), 63rd Congress.",
+          "url": "https://www.loc.gov/item/llsl-v38/"
+        },
+        {
+          "title": "Atlanta daily world (Atlanta, Georgia), January 28, 1960, (City Edition)",
+          "url": "https://www.loc.gov/item/sn82015425/1960-01-28/ed-1/"
+        },
+        {
+          "title": "Potosi journal (Potosi, Mo.), February 18, 1914",
+          "url": "https://www.loc.gov/item/sn90061371/1914-02-18/ed-1/"
+        }
+      ]
+    },
+    {
+      "label": "2-04 | LOC Photos: USGS glacier photographs historical",
+      "notes": "USGS historical glacier photographs documenting retreat over time",
+      "api": "loc",
+      "query": "glacier retreat mountain ice historical survey",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Old Indian trails; incidents of camp and trail life, covering two years exploration through the Rocky Mountains of Canada,",
+          "url": "https://www.loc.gov/item/11015201/"
+        },
+        {
+          "title": "The Portfolio, an artistic periodical;",
+          "url": "https://www.loc.gov/item/08019399/"
+        },
+        {
+          "title": "Guide to the special collections of prints & photographs in the Library of Congress,",
+          "url": "https://www.loc.gov/item/54060020/"
+        }
+      ]
+    },
+    {
+      "label": "2-05 | LOC General: Weather Bureau temperature records climate",
+      "notes": "Historical Weather Bureau climate data and reports",
+      "api": "loc",
+      "query": "Weather Bureau temperature climate records 1950 1960",
+      "total_results": 3819,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "The guardian (Boston, Mass.), August 5, 1950",
+          "url": "https://www.loc.gov/item/sn83045863/1950-08-05/ed-1/"
+        },
+        {
+          "title": "Florida - White pages and Yellow Pages - Tallahassee - 9/1950 thru 1960",
+          "url": "https://www.loc.gov/item/usteledirec07620/"
+        },
+        {
+          "title": "Certain climatic features of the two Dakotas, illustrated with one-hundred and sixty-three tables, charts, and diagrams, by John P. Finley, First Lieutenant, Ninth U.S. Infantry. February 26, 1892. -- Read twice and referred to the Committee on Printing",
+          "url": "https://www.loc.gov/item/2024870047/"
+        }
+      ]
+    },
+    {
+      "label": "2-06 | Chronicling America: Carbon dioxide climate atmosphere 1960-1975",
+      "notes": "Public press coverage of early climate science \u2014 how widely known was it?",
+      "api": "ca",
+      "query": "carbon dioxide atmosphere climate warming",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 1 of The Chronicle (Pascagoula, Miss.), January 16, 1962",
+          "url": "https://www.loc.gov/resource/sn87065526/1962-01-16/ed-1/?sp=1&q=carbon+dioxide+atmosphere+climate+warming"
+        }
+      ]
+    },
+    {
+      "label": "2-07 | LOC General: Hansen 1988 Senate testimony global warming",
+      "notes": "Hansen's 1988 Senate testimony is a key public moment for climate awareness",
+      "api": "loc",
+      "query": "James Hansen Senate testimony global warming 1988",
+      "total_results": 306,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "California - White Pages - Pomona - May 1987 /April 1988",
+          "url": "https://www.loc.gov/item/usteledirec03090/"
+        },
+        {
+          "title": "Governing failure : provisional expertise and the transformation of global development finance",
+          "url": "https://www.loc.gov/item/2020718264/"
+        },
+        {
+          "title": "Federal Register: 53 Fed. Reg. 18545 (May 24, 1988).",
+          "url": "https://www.loc.gov/item/fr053100/"
+        }
+      ]
+    }
+  ]
+}

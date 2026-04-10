@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The American archive held the evidence for nearly 150 years. Search it yourself and watch the silence appear.">
+  <title>Search the Silence · What Did They Know?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --violet: #967DFF; --pleione: #CBBEFF; --pumpkin: #FA941B;
+      --arcturus: #FCC98D; --white: #FFFFFF;
+      --surface-dark: #0a0a0a; --surface-panel: #111111;
+      --violet-text: #A990FF; --corvus-text: #A0A0A0;
+      --text-secondary: rgba(255,255,255,0.65);
+      --text-tertiary: rgba(255,255,255,0.6);
+      --ember: #E85D3A; --ember-text: #FF8A6A;
+      --ice-text: #7DD3EE;
+      --font-display: 'Nunito', sans-serif;
+      --font-body: 'Nunito Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-body); background: var(--surface-dark); color: var(--white); overflow-x: hidden; line-height: 1.6; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 2rem; background: rgba(10,10,10,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(150,125,255,0.12); }
+    .nav-logo { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; color: var(--white); text-decoration: none; }
+    .nav-logo svg { width: 26px; height: 26px; }
+    .nav-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--corvus-text); }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 7rem 2rem 4rem; text-align: center; position: relative; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 40% at 50% 40%, rgba(232,93,58,0.04), transparent 70%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+    .hero-kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ember-text); margin-bottom: 1.4rem; opacity: 0; animation: fadeUp 0.8s 0.2s ease forwards; }
+    .hero-title { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.4rem, 7vw, 4.5rem); line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 0.6rem; opacity: 0; animation: fadeUp 0.8s 0.4s ease forwards; }
+    .hero-sub { font-family: var(--font-display); font-weight: 400; font-size: clamp(1rem, 2.2vw, 1.3rem); color: var(--text-secondary); margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.5s ease forwards; }
+    .hero-lede { max-width: 580px; font-size: clamp(0.95rem, 1.6vw, 1.08rem); line-height: 1.85; color: var(--text-secondary); margin-bottom: 3rem; opacity: 0; animation: fadeUp 0.8s 0.6s ease forwards; }
+    .hero-lede strong { color: rgba(255,255,255,0.92); }
+    .hero-cta { font-family: var(--font-display); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--violet-text); border: 1px solid rgba(150,125,255,0.3); border-radius: 50px; padding: 0.7rem 2rem; background: none; cursor: pointer; transition: all 0.25s ease; opacity: 0; animation: fadeUp 0.8s 0.8s ease forwards; }
+    .hero-cta:hover { border-color: var(--violet); background: rgba(150,125,255,0.06); color: var(--white); }
+
+    /* SEARCH EXPERIENCE */
+    .search-experience { max-width: 800px; margin: 0 auto; padding: 4rem 2rem 6rem; scroll-margin-top: 25vh; }
+
+    /* Step container */
+    .step { margin-bottom: 5rem; opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; scroll-margin-top: 28vh; }
+    .step.visible { opacity: 1; transform: translateY(0); }
+
+    /* Narration text between searches */
+    .narration { max-width: 560px; margin: 0 auto 2rem; }
+    .narration p { font-size: clamp(0.95rem, 1.4vw, 1.05rem); line-height: 1.82; color: rgba(255,255,255,0.68); margin-bottom: 0.85rem; }
+    .narration p:last-child { margin-bottom: 0; }
+    .narration strong { color: rgba(255,255,255,0.95); }
+    .narration em { color: rgba(255,255,255,0.8); font-style: italic; }
+    .narration .pull { display: block; margin: 1.2rem 0; padding-left: 1.1rem; border-left: 2px solid rgba(150,125,255,0.3); font-family: var(--font-display); font-size: clamp(1.02rem, 2vw, 1.25rem); font-weight: 700; font-style: italic; line-height: 1.45; color: var(--pleione); }
+    .narration .pull.ember { border-left-color: rgba(232,93,58,0.4); color: var(--ember-text); }
+
+    /* Date label */
+    .step-date { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 0.8rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+    /* Fake search bar */
+    .search-bar { display: flex; align-items: center; gap: 0.6rem; padding: 0.9rem 1.2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; margin-bottom: 0.4rem; font-size: 0.95rem; color: var(--white); transition: border-color 0.3s ease; }
+    .search-bar.active { border-color: rgba(150,125,255,0.4); }
+    .search-bar.active.ember-glow { border-color: rgba(232,93,58,0.4); }
+    .search-icon { width: 18px; height: 18px; opacity: 0.35; flex-shrink: 0; }
+    .search-query { font-family: var(--font-body); font-size: 0.95rem; color: var(--white); }
+    .search-query .cursor { display: inline-block; width: 2px; height: 1.1em; background: var(--violet); vertical-align: text-bottom; animation: blink 1s step-end infinite; margin-left: 1px; }
+    .search-scope { margin-left: auto; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); white-space: nowrap; }
+
+    /* Results area */
+    .results-area { min-height: 60px; padding: 1rem 0; }
+    .results-loading { display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem 0; font-size: 0.85rem; color: var(--text-tertiary); }
+    .spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.1); border-top-color: var(--violet); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    .results-count { font-size: 0.85rem; color: var(--text-tertiary); padding: 0.5rem 0; }
+    .results-count strong { color: var(--white); font-weight: 700; }
+    .results-count.ember strong { color: var(--ember-text); }
+
+    /* Result cards */
+    .result-card { display: flex; gap: 1rem; padding: 1rem; margin-bottom: 0.6rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; transition: border-color 0.2s ease; }
+    .result-card:hover { border-color: rgba(150,125,255,0.2); }
+    .result-thumb { width: 80px; height: 80px; background: rgba(255,255,255,0.04); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .result-thumb svg { width: 28px; height: 28px; opacity: 0.15; }
+    .result-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .result-meta { flex: 1; min-width: 0; }
+    .result-title { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 0.25rem; line-height: 1.3; }
+    .result-source { font-size: 0.75rem; color: var(--arcturus); font-weight: 600; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
+    .result-snippet { font-size: 0.8rem; color: var(--text-tertiary); line-height: 1.5; }
+
+    /* Empty state */
+    .results-empty { text-align: center; padding: 3rem 1rem; }
+    .results-empty .empty-number { font-family: var(--font-display); font-weight: 900; font-size: 4rem; color: var(--ember-text); line-height: 1; margin-bottom: 0.5rem; }
+    .results-empty .empty-label { font-size: 0.85rem; color: var(--text-tertiary); }
+
+    /* Tally bar — running count visualization */
+    .tally-bar { display: flex; align-items: center; gap: 1rem; margin: 1.5rem auto 0; max-width: 560px; }
+    .tally-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-tertiary); white-space: nowrap; }
+    .tally-track { flex: 1; height: 6px; background: rgba(255,255,255,0.04); border-radius: 3px; overflow: hidden; position: relative; }
+    .tally-fill { height: 100%; border-radius: 3px; transition: width 1s ease, background 0.6s ease; }
+    .tally-fill.healthy { background: var(--violet); }
+    .tally-fill.warning { background: var(--pumpkin); }
+    .tally-fill.danger { background: var(--ember); }
+    .tally-number { font-family: var(--font-display); font-weight: 900; font-size: 1.2rem; min-width: 40px; text-align: right; transition: color 0.4s ease; }
+
+    /* Big silence moment */
+    .silence-moment { text-align: center; padding: 4rem 1rem; background: rgba(0,0,0,0.5); border-radius: 12px; margin: 1rem 0; }
+    .silence-moment .big-num { font-family: var(--font-display); font-weight: 900; font-size: clamp(5rem, 15vw, 8rem); color: var(--ember-text); line-height: 0.85; margin-bottom: 1rem; }
+    .silence-moment .big-label { font-size: clamp(0.92rem, 1.4vw, 1.05rem); color: var(--text-secondary); max-width: 440px; margin: 0 auto; line-height: 1.6; }
+
+    /* Contrast block */
+    .contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 560px; margin: 2rem auto; }
+    .contrast-box { text-align: center; padding: 1.5rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); }
+    .contrast-box .cb-number { font-family: var(--font-display); font-weight: 900; font-size: 2.2rem; line-height: 1; margin-bottom: 0.3rem; }
+    .contrast-box .cb-label { font-size: 0.78rem; color: var(--text-tertiary); line-height: 1.45; }
+    .contrast-box.violet .cb-number { color: var(--violet-text); }
+    .contrast-box.ember .cb-number { color: var(--ember-text); }
+
+    /* Final section */
+    .finale { max-width: 560px; margin: 0 auto; text-align: center; padding: 4rem 2rem 6rem; }
+    .finale-year { font-family: var(--font-display); font-weight: 900; font-size: clamp(3rem, 10vw, 6rem); letter-spacing: -0.04em; line-height: 0.9; background: linear-gradient(135deg, var(--ember) 0%, var(--pumpkin) 60%, var(--violet) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 2rem; }
+    .finale p { font-size: clamp(0.92rem, 1.4vw, 1.05rem); line-height: 1.82; color: var(--text-secondary); margin-bottom: 1rem; }
+    .finale strong { color: rgba(255,255,255,0.9); }
+    .finale em { color: rgba(255,255,255,0.7); }
+
+    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.85rem 2.2rem; background: var(--violet); border: none; border-radius: 50px; font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; color: var(--white); text-decoration: none; letter-spacing: 0.02em; transition: background 0.25s ease, transform 0.15s ease; box-shadow: 0 4px 20px rgba(150,125,255,0.2); }
+    .cta-btn:hover { background: #8068e0; transform: translateY(-1px); }
+
+    /* Continue button between steps */
+    .continue-btn { display: block; margin: 1.8rem auto 0; padding: 0.6rem 1.8rem; background: none; border: 1px solid rgba(150,125,255,0.3); border-radius: 50px; font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; color: var(--violet-text); cursor: pointer; transition: all 0.25s ease; opacity: 0; transform: translateY(6px); animation: fadeUp 0.5s ease forwards; }
+    .continue-btn:hover { border-color: var(--violet); background: rgba(150,125,255,0.06); color: var(--white); }
+    .continue-btn.ember-style { border-color: rgba(232,93,58,0.3); color: var(--ember-text); }
+    .continue-btn.ember-style:hover { border-color: var(--ember); background: rgba(232,93,58,0.06); color: var(--white); }
+
+    /* FOOTER */
+    .site-footer { padding: 2rem; text-align: center; background: #040404; border-top: 1px solid rgba(255,255,255,0.04); }
+    .footer-logo { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; color: var(--text-tertiary); text-decoration: none; margin-bottom: 0.4rem; }
+    .footer-logo svg { width: 20px; height: 20px; opacity: 0.4; }
+    .footer-note { font-size: 0.75rem; color: var(--text-tertiary); letter-spacing: 0.04em; }
+
+    .skip-nav { position: absolute; top: -100%; left: 1rem; z-index: 999; padding: 0.75rem 1.5rem; background: var(--violet); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; border-radius: 0 0 8px 8px; text-decoration: none; }
+    .skip-nav:focus { top: 0; }
+    :focus-visible { outline: 3px solid var(--violet-text); outline-offset: 3px; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      .step { opacity: 1; transform: none; }
+    }
+    @media (max-width: 600px) {
+      .search-experience { padding: 3.5rem 1.2rem 4rem; }
+      .result-thumb { width: 60px; height: 60px; }
+      .nav { padding: 0.65rem 1.2rem; }
+      .nav-label { display: none; }
+      .contrast { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-nav">Skip to content</a>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="13.5" stroke="#967DFF" stroke-width="1.8" stroke-dasharray="1.2 3.8" stroke-linecap="round"/><circle cx="7" cy="18" r="3.2" fill="#967DFF"/><circle cx="24" cy="10" r="3.8" fill="#FA941B"/><circle cx="16" cy="6" r="1.6" fill="white"/><circle cx="20" cy="7" r="1.2" fill="white"/><circle cx="12" cy="8" r="1" fill="white"/></svg>
+    Sitara Systems
+  </a>
+  <span class="nav-label">Library of Congress · Innovator in Residence</span>
+</nav>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">An interactive investigation</div>
+    <h1 class="hero-title">Search the Silence</h1>
+    <p class="hero-sub">132 years of evidence. Watch it disappear.</p>
+    <p class="hero-lede">
+      Climate change didn't appear in 1988. It didn't appear in 1965.
+      The American archive has held the evidence for nearly 150 years.
+      <strong>Search it yourself — and watch the moment the record goes quiet.</strong>
+    </p>
+    <button class="hero-cta" id="start-btn">Begin the search ↓</button>
+  </div>
+</section>
+
+<div class="search-experience" id="experience">
+
+  <!-- ─── SEARCH 1: THE ARCHIVE KNEW FIRST (1856–1913) ──── -->
+  <div class="step" data-delay="0" id="step-1">
+    <div class="step-date">1856 – 1913</div>
+    <div class="narration">
+      <p>In 1856, an American woman named Eunice Newton Foote demonstrated that carbon dioxide traps heat. In 1896, Svante Arrhenius calculated that doubling atmospheric CO₂ would warm the Earth by roughly 5°C.</p>
+      <p>These were not secrets. <strong>Newspapers covered them.</strong></p>
+    </div>
+    <div class="search-bar" id="bar-1">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-1"></span>
+      <span class="search-scope">Chronicling America · 1856–1913</span>
+    </div>
+    <div class="results-area" id="results-1"></div>
+  </div>
+
+  <!-- ─── SEARCH 2: THE ARCHIVE KEEPS KNOWING (1920–1940) ─ -->
+  <div class="step" data-delay="0" id="step-2">
+    <div class="narration">
+      <p>Small-town papers. Regional dailies. The science of atmospheric warming appeared in newspapers from Iowa to Alaska — <strong>decades before any government agency took notice.</strong></p>
+      <p>By the 1930s, the Dust Bowl was reshaping the continent. Guy Callendar proved in 1938 that CO₂ was already rising and temperatures were climbing. Were Americans being told?</p>
+    </div>
+    <div class="search-bar" id="bar-2">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-2"></span>
+      <span class="search-scope">Chronicling America · 1920–1940</span>
+    </div>
+    <div class="results-area" id="results-2"></div>
+  </div>
+
+  <!-- ─── SEARCH 3: THE CRITICAL DECADE (1955–1965) ──────── -->
+  <div class="step" data-delay="0" id="step-3">
+    <div class="step-date">1955 – 1965</div>
+    <div class="narration">
+      <p>Now the critical decade. Roger Revelle calls it a "large-scale geophysical experiment." Keeling begins measuring CO₂ at Mauna Loa. The science is hardening into consensus.</p>
+      <p>And look what the archive holds: an Evening Star article from 1958 headlined <em>"Mystery of the Warming World"</em> — an explicit explanation of global warming, <strong>seven years before the President was told.</strong></p>
+    </div>
+    <div class="search-bar" id="bar-3">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-3"></span>
+      <span class="search-scope">Chronicling America · 1955–1965</span>
+    </div>
+    <div class="results-area" id="results-3"></div>
+  </div>
+
+  <!-- ─── THE TURNING POINT ──────────────────────────────── -->
+  <div class="step" data-delay="0" id="step-tally">
+    <div class="narration">
+      <span class="pull">For 109 years — from Eunice Foote's experiment in 1856 to the Johnson administration in 1965 — the archive held the evidence freely. Newspapers printed it. The public could find it.</span>
+      <p>Then the government catches up. In 1965, the President's Science Advisory Committee delivers a 317-page report warning Lyndon Johnson about CO₂. He transmits it to Congress.</p>
+      <p>You would expect coverage to increase. <strong>Watch what happens instead.</strong></p>
+    </div>
+  </div>
+
+  <!-- ─── SEARCH 4: THE PRESIDENTIAL WARNING (1965) ──────── -->
+  <div class="step" data-delay="0" id="step-4">
+    <div class="step-date">1965</div>
+    <div class="narration">
+      <p>A president is formally warned about climate change and transmits the findings to Congress. Let's search for the coverage.</p>
+    </div>
+    <div class="search-bar" id="bar-4">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-4"></span>
+      <span class="search-scope">Chronicling America · 1965</span>
+    </div>
+    <div class="results-area" id="results-4"></div>
+  </div>
+
+  <!-- ─── SEARCH 5: THE SILENCE BEGINS (1966–1975) ───────── -->
+  <div class="step" data-delay="0" id="step-5">
+    <div class="step-date">1966 – 1975</div>
+    <div class="narration">
+      <p><strong>One page.</strong> The President is warned. Congress receives the report. And one newspaper page covers it.</p>
+      <p>The government keeps studying the problem — the National Academy of Sciences, the EPA, congressional committees. Does the press follow?</p>
+    </div>
+    <div class="search-bar" id="bar-5">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-5"></span>
+      <span class="search-scope">Chronicling America · 1966–1975</span>
+    </div>
+    <div class="results-area" id="results-5"></div>
+  </div>
+
+  <!-- ─── SEARCH 6: DIFFERENT LANGUAGE (1960–1987) ─────── -->
+  <div class="step" data-delay="0" id="step-6">
+    <div class="narration">
+      <p>One page in ten years. Maybe we used the wrong language — maybe newspapers called it something different.</p>
+    </div>
+    <div class="search-bar" id="bar-6">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-6"></span>
+      <span class="search-scope">Chronicling America · 1960–1987</span>
+    </div>
+    <div class="results-area" id="results-6"></div>
+  </div>
+
+  <!-- ─── SEARCH 7: THE FINAL SEARCH ─────────────────────── -->
+  <div class="step" data-delay="0" id="step-7">
+    <div class="narration">
+      <p>Four pages in 27 years. One last search — the phrase that would eventually define the issue.</p>
+    </div>
+    <div class="search-bar" id="bar-7">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="search-query" id="query-7"></span>
+      <span class="search-scope">Chronicling America · before 1988</span>
+    </div>
+    <div class="results-area" id="results-7"></div>
+  </div>
+
+  <!-- ─── THE SILENCE MOMENT ──────────────────────────────── -->
+  <div class="step" data-delay="0" id="step-silence">
+    <div class="silence-moment">
+      <div class="big-num">1</div>
+      <div class="big-label">
+        One newspaper page in the entire digitized American record
+        mentions "global warming" before James Hansen's
+        1988 testimony to Congress.
+      </div>
+    </div>
+
+    <div class="contrast" id="contrast-box">
+      <div class="contrast-box violet">
+        <div class="cb-number">69+</div>
+        <div class="cb-label">newspaper pages on atmospheric warming <em>before</em> the government knew</div>
+      </div>
+      <div class="contrast-box ember">
+        <div class="cb-number">6</div>
+        <div class="cb-label">newspaper pages on climate <em>after</em> the government was warned</div>
+      </div>
+    </div>
+
+    <div class="narration" style="margin-top: 2rem;">
+      <p>Before 1965, Americans could find climate science in their local paper. After 1965 — after the government officially acknowledged the danger — <strong>the coverage nearly vanished.</strong></p>
+      <p>Social scientists call this <strong>pluralistic ignorance</strong> — when everyone in a chain assumes someone else is communicating the danger. Scientists assume the press will cover it. The press assumes the government will act on it. The government assumes the public already knows. No one speaks. The record holds the proof.</p>
+      <span class="pull ember">The archive held the knowledge for 132 years. It also held the silence. Both are in the same building.</span>
+    </div>
+  </div>
+
+  <!-- ─── FINALE ──────────────────────────────────────────── -->
+  <div class="step" data-delay="0" id="step-finale">
+    <div class="finale">
+      <div class="finale-year">1988</div>
+      <p>On June 23, 1988, James Hansen tells Congress that global warming has already begun. He is 99% certain. The press is in the room. The front pages carry it.</p>
+      <p>Hansen didn't discover climate change. <strong>He said out loud what the record had held for 132 years.</strong></p>
+      <p><em>What Did They Know?</em> is an archival investigation that reads the American record against itself — the newspapers that covered it freely, the government reports that finally confirmed it, and the silence that fell in between.</p>
+      <a href="https://www.sitara.systems" class="cta-btn" target="_blank" rel="noopener">Sitara Systems <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M4.5 2a.5.5 0 0 0 0 1h6.793L2.146 12.146a.5.5 0 0 0 .708.708L12 3.707V10.5a.5.5 0 0 0 1 0v-9a.5.5 0 0 0-.5-.5h-8z"/></svg></a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <a href="https://www.sitara.systems" class="footer-logo" target="_blank" rel="noopener">
+    <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="13.5" stroke="currentColor" stroke-width="1.8" stroke-dasharray="1.2 3.8" stroke-linecap="round"/><circle cx="7" cy="18" r="3.2" fill="currentColor"/><circle cx="24" cy="10" r="3.8" fill="currentColor"/></svg>
+    Sitara Systems
+  </a>
+  <div class="footer-note">Draft prototype · BAA 030ADV26R0021 · Library of Congress Innovator in Residence 2026</div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   MOCKED SEARCH DATA — all results are real LC findings
+   Restructured for "The Archive Knew First" (132-year arc)
+   ═══════════════════════════════════════════════════════════════ */
+const SEARCHES = [
+  {
+    id: 1,
+    query: "carbon dioxide atmosphere temperature",
+    typingMs: 40,
+    searchMs: 1800,
+    count: 42,
+    results: [
+      { title: "The Leon Reporter", date: "March 24, 1910", source: "Leon, Iowa", snippet: "The theory that the combustion of coal adds carbon dioxide to the atmosphere, which in turn affects the temperature of the Earth…", thumb: "images/N-leon-reporter-iowa-1910-03-24.jpg" },
+      { title: "The San Francisco Call", date: "July 27, 1913", source: "San Francisco, Calif.", snippet: "Carbon dioxide produced by the burning of coal and other fuels has been shown to have a measurable effect on the temperature of the atmosphere…", thumb: "images/N-san-francisco-call-1913-07-27.jpg" },
+    ],
+    narrationAfter: null
+  },
+  {
+    id: 2,
+    query: "carbon dioxide warming climate coal",
+    typingMs: 40,
+    searchMs: 2000,
+    count: 27,
+    results: [
+      { title: "Seward Daily Gateway", date: "June 6, 1931", source: "Seward, Alaska", snippet: "Scientists report that increasing carbon dioxide in the atmosphere may be responsible for a gradual warming trend observed across the Northern Hemisphere…", thumb: "images/N-seward-daily-gateway-alaska-1931-06-06.jpg" },
+      { title: "The Daily Tribune", date: "April 12, 1933", source: "Wisconsin Rapids, Wis.", snippet: "Earth's blanket of carbon dioxide from the burning of coal and oil thickens year by year, and some scientists believe temperatures will continue to rise…" },
+      { title: "The Evening Independent", date: "September 20, 1938", source: "St. Petersburg, Fla.", snippet: "British engineer Guy Stewart Callendar presents evidence that the Earth's temperature has risen measurably, and links the change to carbon dioxide from fuel combustion…" },
+    ],
+    narrationAfter: null
+  },
+  {
+    id: 3,
+    query: "carbon dioxide atmosphere warming scientist",
+    typingMs: 40,
+    searchMs: 2200,
+    count: 4,
+    countClass: "",
+    results: [
+      { title: "Evening Star", date: "January 26, 1958", source: "Washington, D.C. · Page 23", snippet: "THE NEW FORCES — Mystery of the Warming World. By John Stark. Maybe the most pressing problem facing the world today…", highlight: true, thumb: "images/N-evening-star-dc-1958-01-26-mystery-warming-world.jpg" },
+      { title: "Evening Star", date: "August 26, 1959", source: "Washington, D.C. · Page 7", snippet: "Bouncing radar signals off the moon… Scientists report continued measurements of carbon dioxide buildup in the atmosphere…", thumb: "images/N-evening-star-dc-1959-08-26.jpg" },
+      { title: "Atlanta Daily World", date: "September 1, 1956", source: "Atlanta, Georgia · Page 6", snippet: "Research scientists have reported new findings on the relationship between carbon dioxide levels and global temperature trends…", thumb: "images/N-atlanta-daily-world-1956-09-01.jpg" },
+      { title: "Jackson Advocate", date: "October 26, 1957", source: "Jackson, Mississippi · Page 2", snippet: "International Geophysical Year scientists are measuring atmospheric gases that may be contributing to a warming of the Earth's climate…", thumb: "images/N-jackson-advocate-1957-10-26.jpg" },
+    ],
+    narrationAfter: null
+  },
+  {
+    id: 4,
+    query: "Johnson conservation environment message Congress",
+    typingMs: 35,
+    searchMs: 2000,
+    count: 1,
+    countClass: "ember",
+    results: [],
+    emptyState: true,
+    emptyLabel: "newspaper page",
+    narrationAfter: null
+  },
+  {
+    id: 5,
+    query: "carbon dioxide climate greenhouse warming",
+    typingMs: 40,
+    searchMs: 2400,
+    count: 1,
+    countClass: "ember",
+    results: [],
+    emptyState: true,
+    emptyLabel: "newspaper page in ten years",
+    narrationAfter: null
+  },
+  {
+    id: 6,
+    query: "greenhouse effect",
+    typingMs: 50,
+    searchMs: 1600,
+    count: 4,
+    countClass: "ember",
+    results: [],
+    emptyState: true,
+    emptyLabel: "newspaper pages in 27 years",
+    narrationAfter: null
+  },
+  {
+    id: 7,
+    query: "global warming",
+    typingMs: 50,
+    searchMs: 2000,
+    count: 1,
+    countClass: "ember",
+    results: [],
+    emptyState: true,
+    emptyLabel: "newspaper page before 1988",
+    narrationAfter: null
+  },
+];
+
+const NEWSPAPER_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>';
+
+/* ─── Animation engine ─────────────────────────────────────── */
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function waitForClick(parentEl, label, isEmber) {
+  return new Promise(resolve => {
+    const btn = document.createElement('button');
+    btn.className = 'continue-btn' + (isEmber ? ' ember-style' : '');
+    btn.textContent = label || 'Next search →';
+    parentEl.appendChild(btn);
+    // Ensure button is visible — cards may have pushed it below viewport
+    setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 120);
+    btn.addEventListener('click', () => {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+      setTimeout(() => btn.remove(), 300);
+      resolve();
+    }, { once: true });
+  });
+}
+
+async function typeText(el, text, ms) {
+  el.innerHTML = '';
+  for (let i = 0; i < text.length; i++) {
+    el.innerHTML = text.slice(0, i + 1) + '<span class="cursor"></span>';
+    await sleep(ms);
+  }
+  el.innerHTML = text;
+}
+
+async function animateSearch(s) {
+  const step = document.getElementById('step-' + s.id);
+  const bar = document.getElementById('bar-' + s.id);
+  const queryEl = document.getElementById('query-' + s.id);
+  const resultsEl = document.getElementById('results-' + s.id);
+
+  // Reveal step and ensure it's scrolled into view (nav-safe)
+  step.classList.add('visible');
+  step.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  await sleep(500);
+
+  // Type query
+  bar.classList.add('active');
+  if (s.countClass === 'ember') bar.classList.add('ember-glow');
+  await typeText(queryEl, s.query, s.typingMs);
+  await sleep(300);
+
+  // Show loading
+  resultsEl.innerHTML = '<div class="results-loading"><div class="spinner"></div>Searching Chronicling America…</div>';
+  await sleep(s.searchMs);
+
+  // Show count
+  const countClass = s.countClass || '';
+  const resultWord = s.count === 1 ? 'result' : 'results';
+  resultsEl.innerHTML = '<div class="results-count ' + countClass + '"><strong>' + s.count.toLocaleString() + '</strong> ' + resultWord + '</div>';
+  await sleep(600);
+
+  if (s.emptyState) {
+    const label = s.emptyLabel || 'results';
+    resultsEl.innerHTML += '<div class="results-empty"><div class="empty-number">' + s.count + '</div><div class="empty-label">' + label + '</div></div>';
+    await sleep(400);
+    return;
+  }
+
+  // Render result cards one by one
+  for (const r of s.results) {
+    const highlight = r.highlight ? 'border-color: rgba(232,93,58,0.3);' : '';
+    const card = document.createElement('div');
+    card.className = 'result-card';
+    card.style.cssText = 'opacity:0;transform:translateY(8px);transition:opacity 0.3s ease,transform 0.3s ease;' + highlight;
+    const thumbContent = r.thumb
+      ? `<img src="${r.thumb}" alt="${r.title}" loading="lazy">`
+      : NEWSPAPER_ICON;
+    card.innerHTML = `
+      <div class="result-thumb">${thumbContent}</div>
+      <div class="result-meta">
+        <div class="result-source">${r.source}</div>
+        <div class="result-title">${r.title} · ${r.date}</div>
+        <div class="result-snippet">${r.snippet}</div>
+      </div>`;
+    resultsEl.appendChild(card);
+    await sleep(50);
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
+    await sleep(200);
+  }
+}
+
+async function revealStep(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.classList.add('visible');
+    await sleep(400);
+  }
+}
+
+/* ─── Sequence definitions ─────────────────────────────────── */
+/* Each entry in the sequence is either a search animation or a
+   reveal of a narration step, followed by a user-paced pause. */
+
+const SEQUENCE = [
+  // Phase 1: The Archive Knew First
+  { type: 'search', idx: 0, btnLabel: 'Next search →', scrollTo: 'step-2' },
+  { type: 'search', idx: 1, btnLabel: 'Next search →', scrollTo: 'step-3' },
+  { type: 'search', idx: 2, btnLabel: 'Continue →', scrollTo: 'step-tally', ember: false },
+  // Turning point
+  { type: 'reveal', id: 'step-tally', btnLabel: 'Enter the silence →', ember: true, scrollTo: 'step-4' },
+  // Phase 2: The Silence
+  { type: 'search', idx: 3, btnLabel: 'Next search →', scrollTo: 'step-5', ember: true },
+  { type: 'search', idx: 4, btnLabel: 'Next search →', scrollTo: 'step-6', ember: true },
+  { type: 'search', idx: 5, btnLabel: 'One last search →', scrollTo: 'step-7', ember: true },
+  { type: 'search', idx: 6, btnLabel: null, scrollTo: 'step-silence', ember: true },
+  // Silence moment + finale (no button needed on last two)
+  { type: 'reveal', id: 'step-silence', btnLabel: null, scrollTo: 'step-finale' },
+  { type: 'reveal', id: 'step-finale', btnLabel: null },
+];
+
+/* ─── Main sequence (user-paced) ──────────────────────────── */
+async function runExperience() {
+  document.getElementById('experience').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  await sleep(700);
+
+  for (let i = 0; i < SEQUENCE.length; i++) {
+    const seq = SEQUENCE[i];
+
+    if (seq.type === 'search') {
+      await animateSearch(SEARCHES[seq.idx]);
+    } else if (seq.type === 'reveal') {
+      await revealStep(seq.id);
+      const el = document.getElementById(seq.id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      await sleep(400);
+    }
+
+    // If there's a button label, wait for user to click before continuing
+    if (seq.btnLabel) {
+      const parentId = seq.type === 'search' ? 'step-' + SEARCHES[seq.idx].id : seq.id;
+      const parentEl = document.getElementById(parentId);
+      await waitForClick(parentEl, seq.btnLabel, !!seq.ember);
+    } else {
+      // Auto-pause briefly on the last items (silence moment → finale)
+      await sleep(1800);
+    }
+
+    // Scroll to next section
+    if (seq.scrollTo) {
+      const nextEl = document.getElementById(seq.scrollTo);
+      if (nextEl) {
+        nextEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        await sleep(500);
+      }
+    }
+  }
+}
+
+/* ─── Start button ──────────────────────────────────────────── */
+document.getElementById('start-btn').addEventListener('click', () => {
+  document.getElementById('start-btn').style.opacity = '0.3';
+  document.getElementById('start-btn').style.pointerEvents = 'none';
+  runExperience();
+});
+</script>
+
+</body>
+</html>

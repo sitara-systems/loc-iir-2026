@@ -1,0 +1,831 @@
+{
+  "generated": "2026-03-27T21:11:14.552083",
+  "searches": [
+    {
+      "label": "E1-01 | LOC General: Eunice Foote 1856 CO2 heat experiments",
+      "notes": "First demonstration that CO2 traps heat \u2014 her paper was read by a man at AAAS because she couldn't present",
+      "api": "loc",
+      "query": "Eunice Foote heat sun rays gas 1856",
+      "total_results": 1183,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "History of Ray county, Mo.,",
+          "url": "https://www.loc.gov/item/02002200/"
+        },
+        {
+          "title": "Analyses of natural gases, 1917-80",
+          "url": "https://www.loc.gov/item/81607556/"
+        },
+        {
+          "title": "Maryland - White and Yellow Pages - Rising Sun",
+          "url": "https://www.loc.gov/item/usteledirec05361/"
+        }
+      ]
+    },
+    {
+      "label": "E1-02 | LOC General: Eunice Newton Foote women's rights science",
+      "notes": "Foote was also a women's rights activist (Seneca Falls signatory) \u2014 LC may hold her through that door",
+      "api": "loc",
+      "query": "Eunice Newton Foote scientist women",
+      "total_results": 2057,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Foote family : comprising the genealogy and history of Nathaniel Foote, of Wethersfield, Conn., and his descendants; also a partial record of descendants of Pasco Foote of Salem, Mass., Richard Foote of Stafford County, Va., and John Foote of New York City",
+          "url": "https://www.loc.gov/item/11011567/"
+        },
+        {
+          "title": "Sketches of representative women of New England,",
+          "url": "https://www.loc.gov/item/05011060/"
+        },
+        {
+          "title": "Notable women of St. Louis, 1914;",
+          "url": "https://www.loc.gov/item/14008248/"
+        }
+      ]
+    },
+    {
+      "label": "E1-03 | LOC General: American Journal of Science 1856",
+      "notes": "The journal that published Foote's paper \u2014 confirm LC holds this volume",
+      "api": "loc",
+      "query": "American Journal Science Arts 1856",
+      "total_results": 17856,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "On the phosphatic guano islands of the Pacific Ocean.",
+          "url": "https://www.loc.gov/item/12013005/"
+        },
+        {
+          "title": "Indiana American (Brookville, Ind.), October 24, 1856",
+          "url": "https://www.loc.gov/item/sn84023881/1856-10-24/ed-1/"
+        },
+        {
+          "title": "Indiana American (Brookville, Ind.), January 4, 1856",
+          "url": "https://www.loc.gov/item/sn84023881/1856-01-04/ed-1/"
+        }
+      ]
+    },
+    {
+      "label": "E1-04 | LOC General: Svante Arrhenius carbon dioxide temperature 1896",
+      "notes": "First quantitative climate sensitivity estimate (1896) \u2014 Philosophical Magazine",
+      "api": "loc",
+      "query": "Arrhenius carbonic acid temperature climate",
+      "total_results": 60,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "[Vol. 25, SILK, ARTIFICIAL TO SULPHOVINIC ACID] The Encyclopedia Americana; a library of universal knowledge.",
+          "url": "https://www.loc.gov/item/22001305/resource/gdcmassbookdig.encyclopediaamer25unse"
+        },
+        {
+          "title": "Mass Deacidification Annotated Bibliography 1990-2010",
+          "url": "https://www.loc.gov/preservation/resources/rt/deacid_bib2011.pdf"
+        },
+        {
+          "title": "A brief course in chemistry,",
+          "url": "https://www.loc.gov/item/29012591/"
+        }
+      ]
+    },
+    {
+      "label": "E1-05 | LOC General: Guy Callendar 1938 carbon dioxide temperature",
+      "notes": "British engineer who proved CO2 was measurably rising \u2014 used US Weather Bureau data",
+      "api": "loc",
+      "query": "Callendar carbon dioxide temperature artificial production",
+      "total_results": 49,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Fuel and refactory materials,",
+          "url": "https://www.loc.gov/item/23000557/"
+        },
+        {
+          "title": "Study of four hundred steaming tests made at the fuel-testing plant, St. Louis, Mo., in 1904, 1905, and 1906, by Lester P. Breckenridge. [U.S. Geological Survey Bulletin No. 325. Series E, Chemistry and Physics, 53. Series Q, Fuels, 5.]",
+          "url": "https://www.loc.gov/item/2024888418/"
+        },
+        {
+          "title": "Applied thermodynamics for engineers,",
+          "url": "https://www.loc.gov/item/10021621/"
+        }
+      ]
+    },
+    {
+      "label": "E1-06 | Chronicling America: coal smoke climate atmosphere 1890-1915",
+      "notes": "Early newspaper coverage linking coal combustion to atmospheric effects \u2014 the 1912 coal/climate article is famous",
+      "api": "ca",
+      "query": "coal smoke atmosphere climate temperature",
+      "total_results": 0,
+      "has_results": false,
+      "top_items": []
+    },
+    {
+      "label": "E1-07 | Chronicling America: carbon dioxide atmosphere 1896-1940",
+      "notes": "Press coverage of Arrhenius/Callendar era \u2014 how visible was early climate science?",
+      "api": "ca",
+      "query": "carbon dioxide atmosphere temperature warming",
+      "total_results": 62,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 4 of Seward daily gateway (Seward, Alaska), June 6, 1931",
+          "url": "https://www.loc.gov/resource/sn87062169/1931-06-06/ed-1/?sp=4&q=carbon+dioxide+atmosphere+temperature+warming"
+        },
+        {
+          "title": "Image 3 of The Leon reporter (Leon, Iowa), March 24, 1910",
+          "url": "https://www.loc.gov/resource/sn87057096/1910-03-24/ed-1/?sp=3&q=carbon+dioxide+atmosphere+temperature+warming"
+        },
+        {
+          "title": "Image 7 of The San Francisco call (San Francisco [Calif.]), July 27, 1913",
+          "url": "https://www.loc.gov/resource/sn85066387/1913-07-27/ed-1/?sp=7&q=carbon+dioxide+atmosphere+temperature+warming"
+        }
+      ]
+    },
+    {
+      "label": "E2-01 | LOC General: Roger Revelle carbon dioxide ocean 1957",
+      "notes": "Revelle-Suess paper (1957) \u2014 'human beings are now carrying out a large scale geophysical experiment'",
+      "api": "loc",
+      "query": "Roger Revelle carbon dioxide ocean atmosphere geophysical",
+      "total_results": 16,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Evening star (Washington, D.C.), December 27, 1955",
+          "url": "https://www.loc.gov/item/sn83045462/1955-12-27/ed-1/"
+        },
+        {
+          "title": "Evening star (Washington, D.C.), March 16, 1930",
+          "url": "https://www.loc.gov/item/sn83045462/1930-03-16/ed-1/"
+        },
+        {
+          "title": "Evening star (Washington, D.C.), February 10, 1958",
+          "url": "https://www.loc.gov/item/sn83045462/1958-02-10/ed-1/"
+        }
+      ]
+    },
+    {
+      "label": "E2-02 | LOC General: International Geophysical Year 1957 Congress",
+      "notes": "Congressional funding/oversight of IGY \u2014 which launched the Keeling measurements",
+      "api": "loc",
+      "query": "International Geophysical Year 1957 Congress appropriations",
+      "total_results": 405,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "H.Con.Res.189 - 108th Congress (2003-2004): Celebrating the 50th anniversary of the International Geophysical Year (IGY) and supporting an International Geophysical Year-2 (IGY-2) in 2007-08.",
+          "url": "https://www.congress.gov/bill/108th-congress/house-concurrent-resolution/189"
+        },
+        {
+          "title": "S.Res.466 - 108th Congress (2003-2004): A resolution celebrating the anniversaries of the International Polar Years (1882-1883 and 1932-1933) and International Geophysical Year (1957-1958) and supporting a continuation of this international science year tradition in 2007-2008.",
+          "url": "https://www.congress.gov/bill/108th-congress/senate-resolution/466"
+        },
+        {
+          "title": "H.Con.Res.76 - 110th Congress (2007-2008): Honoring the 50th Anniversary of the International Geophysical Year (IGY) and its past contributions to space research, and looking forward to future accomplishments.",
+          "url": "https://www.congress.gov/bill/110th-congress/house-concurrent-resolution/76"
+        }
+      ]
+    },
+    {
+      "label": "E2-03 | LOC General: Charles Keeling carbon dioxide measurements Mauna Loa",
+      "notes": "Keeling Curve \u2014 the foundational CO2 dataset, begun during IGY 1958",
+      "api": "loc",
+      "query": "Keeling carbon dioxide Mauna Loa measurements atmosphere",
+      "total_results": 49,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Observing the Living Oceans from Space",
+          "url": "https://www.loc.gov/item/2021688521/"
+        },
+        {
+          "title": "Earth's Water Cycle in a Changing Climate",
+          "url": "https://www.loc.gov/item/2020720015/"
+        },
+        {
+          "title": "Weather Forecasting",
+          "url": "https://www.loc.gov/item/2021687796/"
+        }
+      ]
+    },
+    {
+      "label": "E2-04 | LOC General: Revelle congressional testimony climate CO2",
+      "notes": "Revelle testified before Congress on CO2/oceans \u2014 this should be in committee hearing records",
+      "api": "loc",
+      "query": "Revelle testimony Congress carbon dioxide climate",
+      "total_results": 24,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "U.S. Statutes at Large, Volume 38 (1913-1915), 63rd Congress.",
+          "url": "https://www.loc.gov/item/llsl-v38/"
+        },
+        {
+          "title": "Marble Hill press (Marbel [sic] Hill, Mo.), March 25, 1897",
+          "url": "https://www.loc.gov/item/sn89066695/1897-03-25/ed-1/"
+        },
+        {
+          "title": "Atlanta daily world (Atlanta, Georgia), January 28, 1960, (City Edition)",
+          "url": "https://www.loc.gov/item/sn82015425/1960-01-28/ed-1/"
+        }
+      ]
+    },
+    {
+      "label": "E2-05 | Chronicling America: carbon dioxide atmosphere 1955-1965",
+      "notes": "Press coverage during the decade leading up to the PSAC report \u2014 was the public aware?",
+      "api": "ca",
+      "query": "carbon dioxide atmosphere warming scientist",
+      "total_results": 4,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 23 of Evening star (Washington, D.C.), January 26, 1958",
+          "url": "https://www.loc.gov/resource/sn83045462/1958-01-26/ed-1/?sp=23&q=carbon+dioxide+atmosphere+warming+scientist"
+        },
+        {
+          "title": "Image 7 of Evening star (Washington, D.C.), August 26, 1959",
+          "url": "https://www.loc.gov/resource/sn83045462/1959-08-26/ed-1/?sp=7&q=carbon+dioxide+atmosphere+warming+scientist"
+        },
+        {
+          "title": "Image 12 of Evening star (Washington, D.C.), February 17, 1958",
+          "url": "https://www.loc.gov/resource/sn83045462/1958-02-17/ed-1/?sp=12&q=carbon+dioxide+atmosphere+warming+scientist"
+        }
+      ]
+    },
+    {
+      "label": "E2-06 | LOC General: Conservation Foundation 1963 CO2 conference",
+      "notes": "The 1963 conference where Revelle and Keeling presented \u2014 precursor to the PSAC panel",
+      "api": "loc",
+      "query": "Conservation Foundation carbon dioxide conference 1963",
+      "total_results": 754,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Wood science for conservation of cultural heritage, Florence 2007 : proceedings of the international conference held by Cost action IE0601 in Florence (Italy), 8-10 November 2007",
+          "url": "https://www.loc.gov/item/2020718143/"
+        },
+        {
+          "title": "What works in conservation",
+          "url": "https://www.loc.gov/item/2020447489/"
+        },
+        {
+          "title": "Mine drainage and surface mine reclamation : proceedings of a conference",
+          "url": "https://www.loc.gov/item/88601763/"
+        }
+      ]
+    },
+    {
+      "label": "E3-01 | LOC General: PSAC 1965 Restoring Quality Environment",
+      "notes": "THE central document \u2014 317 pages, 22-page CO2 appendix, chaired by Revelle, given to LBJ",
+      "api": "loc",
+      "query": "President Science Advisory Committee Restoring Quality Environment 1965",
+      "total_results": 2276,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "EPA Science Advisory Board",
+          "url": "https://www.loc.gov/item/2024769213/"
+        },
+        {
+          "title": "TSCA Science Advisory Committee on Chemicals",
+          "url": "https://www.loc.gov/item/2024769421/"
+        },
+        {
+          "title": "Clean Air Scientific Advisory Committee",
+          "url": "https://www.loc.gov/item/2024769212/"
+        }
+      ]
+    },
+    {
+      "label": "E3-02 | LOC General: PSAC atmospheric carbon dioxide appendix Y",
+      "notes": "Alternate search terms for the PSAC report's CO2 section (Appendix Y4)",
+      "api": "loc",
+      "query": "Science Advisory Committee atmospheric carbon dioxide appendix environmental pollution",
+      "total_results": 627,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "EPA Science Advisory Board",
+          "url": "https://www.loc.gov/item/2024769213/"
+        },
+        {
+          "title": "TSCA Science Advisory Committee on Chemicals",
+          "url": "https://www.loc.gov/item/2024769421/"
+        },
+        {
+          "title": "Clean Air Scientific Advisory Committee",
+          "url": "https://www.loc.gov/item/2024769212/"
+        }
+      ]
+    },
+    {
+      "label": "E3-03 | LOC General: LBJ conservation natural beauty Congress 1965",
+      "notes": "LBJ Special Message to Congress on Conservation (Feb 8, 1965) \u2014 accompanied the PSAC report",
+      "api": "loc",
+      "query": "Johnson conservation natural beauty message Congress 1965",
+      "total_results": 3222,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Report of the National Conservation Commission, with accompanying papers, February, 1909. Special message from the President of the United States, transmitting a report of the National Conservation Commission, with accompanying papers. In three volumes. Volume II",
+          "url": "https://www.loc.gov/item/2024888434/"
+        },
+        {
+          "title": "Romantic modernism : nostalgia in the world of conservation",
+          "url": "https://www.loc.gov/item/2020718313/"
+        },
+        {
+          "title": "Preservation and improvement of the scenic beauty of the Niagara Falls and rapids. Message from the President of the United States transmitting the final report of the Special International Niagara Board, together with an accompanying report from the Acting Secretary of State and a copy of a letter from the Secretary of War. April 14 (calendar day, April 16), 1930. -- Referred to the Committee on Foreign Relations. Ordered to be printed, with illustrations",
+          "url": "https://www.loc.gov/item/2024879643/"
+        }
+      ]
+    },
+    {
+      "label": "E3-04 | LOC General: LBJ pollution environment special message 1965",
+      "notes": "Alternate search \u2014 LBJ's messages to Congress about environmental quality",
+      "api": "loc",
+      "query": "Johnson pollution environment special message 1965 quality",
+      "total_results": 1486,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Pollution of Illinois and Mississippi rivers by Chicago sewage",
+          "url": "https://www.loc.gov/item/gs07000807/"
+        },
+        {
+          "title": "Don Johnson",
+          "url": "https://www.congress.gov/member/don-johnson/J000120"
+        },
+        {
+          "title": "S.1321 - 108th Congress (2003-2004): A bill to authorize resources to foster a safe learning environment that supports academic achievement for all students by improving the quality of interim alternative educational settings, providing more behavioral supports in schools, and supporting whole school interventions.",
+          "url": "https://www.congress.gov/bill/108th-congress/senate-bill/1321"
+        }
+      ]
+    },
+    {
+      "label": "E3-05 | Chronicling America: Johnson conservation environment 1965",
+      "notes": "Newspaper coverage of LBJ's environmental message \u2014 was the PSAC warning reported?",
+      "api": "ca",
+      "query": "Johnson conservation environment pollution message",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "E3-06 | LOC General: Environmental Pollution Panel 1965 report",
+      "notes": "The PSAC sub-panel's formal name \u2014 may be cataloged under this title",
+      "api": "loc",
+      "query": "Environmental Pollution Panel report 1965",
+      "total_results": 1650,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "S.Res.342 - 116th Congress (2019-2020): A resolution expressing the need for immediate climate action in response to the report of the United Nations Intergovernmental Panel on Climate Change entitled \"Special Report on the Ocean and Cryosphere in a Changing Climate\".",
+          "url": "https://www.congress.gov/bill/116th-congress/senate-resolution/342"
+        },
+        {
+          "title": "H.Res.589 - 116th Congress (2019-2020): Expressing the need for immediate climate action in response to the United Nations Intergovernmental Panel on Climate Change Special Report on the Ocean and Cryosphere in a Changing Climate.",
+          "url": "https://www.congress.gov/bill/116th-congress/house-resolution/589"
+        },
+        {
+          "title": "Environmental Law Research",
+          "url": "https://www.loc.gov/item/2024697747/"
+        }
+      ]
+    },
+    {
+      "label": "E4-01 | LOC General: Clean Air Act 1970 Senate hearings pollution",
+      "notes": "The Clean Air Act addressed smog but not CO2 \u2014 the specific mechanism of sidelining",
+      "api": "loc",
+      "query": "Clean Air Act 1970 Senate hearings air pollution",
+      "total_results": 1941,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "H.Con.Res.130 - 115th Congress (2017-2018): Supporting America's clean car standards and defending State authority under the Clean Air Act to protect their citizens from harmful air pollution.",
+          "url": "https://www.congress.gov/bill/115th-congress/house-concurrent-resolution/130"
+        },
+        {
+          "title": "S.Con.Res.42 - 115th Congress (2017-2018): A concurrent resolution supporting America's clean car standards and defending State authority under the Clean Air Act to protect their citizens from harmful air pollution.",
+          "url": "https://www.congress.gov/bill/115th-congress/senate-concurrent-resolution/42"
+        },
+        {
+          "title": "S.253 - 95th Congress (1977-1978): Clean Air Act Amendments",
+          "url": "https://www.congress.gov/bill/95th-congress/senate-bill/253"
+        }
+      ]
+    },
+    {
+      "label": "E4-02 | LOC General: National Academy Sciences climate 1979 Charney",
+      "notes": "The Charney Report (1979) \u2014 first NAS climate sensitivity assessment; 1.5\u20134.5\u00b0C range still holds",
+      "api": "loc",
+      "query": "National Academy Sciences climate carbon dioxide 1979",
+      "total_results": 404,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Global carbon pricing : the path to climate cooperation",
+          "url": "https://www.loc.gov/item/2020719818/"
+        },
+        {
+          "title": "Climate Change Policy: Updates",
+          "url": "https://www.loc.gov/item/2021688961/"
+        },
+        {
+          "title": "WTO law and trade policy reform for low-carbon technology diffusion : common concern of humankind, carbon pricing, and export credit support",
+          "url": "https://www.loc.gov/item/2020048849/"
+        }
+      ]
+    },
+    {
+      "label": "E4-03 | LOC General: EPA carbon dioxide climate assessment 1983",
+      "notes": "EPA's 1983 report 'Can We Delay a Greenhouse Warming?' \u2014 another federal warning ignored",
+      "api": "loc",
+      "query": "EPA carbon dioxide climate assessment greenhouse 1983",
+      "total_results": 86,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "U.S. Reports: Massachusetts v. EPA, 549 U.S. 497 (2007).",
+          "url": "https://www.loc.gov/item/usrep549497/"
+        },
+        {
+          "title": "Life-cycle impact assessment : a conceptual framework, key issues, and summary of existing methods.",
+          "url": "https://www.loc.gov/item/95216916/"
+        },
+        {
+          "title": "EPA Science Advisory Board",
+          "url": "https://www.loc.gov/item/2024769213/"
+        }
+      ]
+    },
+    {
+      "label": "E4-04 | Chronicling America: carbon dioxide greenhouse warming 1970-1987",
+      "notes": "Press coverage between the warning and the reckoning \u2014 the two decades of institutional silence",
+      "api": "ca",
+      "query": "carbon dioxide greenhouse warming climate",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "E4-05 | LOC General: Earth Day 1970 environment Congress",
+      "notes": "Earth Day (April 22, 1970) \u2014 mass public environmentalism that focused on visible pollution, not CO2",
+      "api": "loc",
+      "query": "Earth Day 1970 environment Congress pollution",
+      "total_results": 1317,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Online Exhibition - Down to Earth: Herblock and Photographers Observe the Environment",
+          "url": "https://www.loc.gov/exhibits/herblock-down-to-earth/exhibition-items.html"
+        },
+        {
+          "title": "S.864 - 106th Congress (1999-2000): Earth Day Act",
+          "url": "https://www.congress.gov/bill/106th-congress/senate-bill/864"
+        },
+        {
+          "title": "H.Con.Res.255 - 111th Congress (2009-2010): Commemorating the 40th anniversary of Earth Day and honoring the founder of Earth Day, the late Senator Gaylord Nelson of Wisconsin.",
+          "url": "https://www.congress.gov/bill/111th-congress/house-concurrent-resolution/255"
+        }
+      ]
+    },
+    {
+      "label": "E4-06 | Chronicling America: Earth Day 1970 newspaper coverage",
+      "notes": "Newspaper coverage of the first Earth Day \u2014 what environmental concerns were visible to the public?",
+      "api": "ca",
+      "query": "Earth Day environment pollution April",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "E4-07 | LOC General: ozone layer CFC Montreal Protocol Congress",
+      "notes": "The ozone story \u2014 the one time the system worked (science \u2192 warning \u2192 international treaty)",
+      "api": "loc",
+      "query": "ozone layer chlorofluorocarbon Montreal Protocol Congress hearings",
+      "total_results": 27,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "H.Res.350 - 102nd Congress (1991-1992): Urging the Administrator of the Environmental Protection Agency to accelerate the scheduled phaseout of ozone-destroying substances in the United States as required pursuant to the Clean Air Act Amendments of 1990; calling on the President to urge the Contracting Parties to the Montreal Protocol to modify the Protocol in order to accelerate the phaseout of such substances; and for other purposes based on scientific findings concerning the degradation of the stratospheric ozone layer.",
+          "url": "https://www.congress.gov/bill/102nd-congress/house-resolution/350"
+        },
+        {
+          "title": "S.Res.217 - 102nd Congress (1991-1992): A resolution urging the Administrator of the Environmental Protection Agency to accelerate the scheduled phaseout of ozone-destroying substances in the United States as required pursuant to the Clean Air Act Amendments of 1990; calling on the President to urge the Contracting Parties to the Montreal Protocol to modify the Protocol in order to accelerate the phaseout of such substances; and for other purposes based on scientific findings concerning the degradation of the stratospheric ozone layer.",
+          "url": "https://www.congress.gov/bill/102nd-congress/senate-resolution/217"
+        },
+        {
+          "title": "S.Res.95 - 102nd Congress (1991-1992): A resolution urging the Administrator of the Environmental Protection Agency to accelerate the scheduled phaseout of production of ozone-destroying substances in the United States as required pursuant to the Clean Air Act Amendments of 1990 and calling on the President to urge the United Nations to call a special session of the Contracting Parties to the Montreal Protocol in order to conclude an agreement accelerating the scheduled phaseout of such substances and for other purposes based on recent scientific findings concerning the degradation of the stratospheric ozone layer and increased atmospheric concentrations of substances that lead to the degradation of the stratospheric ozone layer.",
+          "url": "https://www.congress.gov/bill/102nd-congress/senate-resolution/95"
+        }
+      ]
+    },
+    {
+      "label": "E5-01 | LOC General: Hansen 1988 Senate testimony global warming",
+      "notes": "The 1988 testimony that put climate change on the political map",
+      "api": "loc",
+      "query": "James Hansen Senate testimony global warming 1988",
+      "total_results": 306,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "California - White Pages - Pomona - May 1987 /April 1988",
+          "url": "https://www.loc.gov/item/usteledirec03090/"
+        },
+        {
+          "title": "Governing failure : provisional expertise and the transformation of global development finance",
+          "url": "https://www.loc.gov/item/2020718264/"
+        },
+        {
+          "title": "Federal Register: 53 Fed. Reg. 18545 (May 24, 1988).",
+          "url": "https://www.loc.gov/item/fr053100/"
+        }
+      ]
+    },
+    {
+      "label": "E5-02 | LOC General: Senate Energy Natural Resources 1988 hearing",
+      "notes": "The committee record for the hearing \u2014 Tim Wirth's famous staging (opening windows to make the room hot)",
+      "api": "loc",
+      "query": "Senate Energy Natural Resources Committee hearing 1988 climate greenhouse",
+      "total_results": 923,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "H.R.4657 - 116th Congress (2019-2020): To require the Federal Energy Regulatory Commission to consider greenhouse gas emissions related to natural gas pipelines, and for other purposes.",
+          "url": "https://www.congress.gov/bill/116th-congress/house-bill/4657"
+        },
+        {
+          "title": "S.2667 - 100th Congress (1987-1988): National Energy Policy Act of 1988",
+          "url": "https://www.congress.gov/bill/100th-congress/senate-bill/2667"
+        },
+        {
+          "title": "H.R.5380 - 100th Congress (1987-1988): National Energy Policy Act of 1988",
+          "url": "https://www.congress.gov/bill/100th-congress/house-bill/5380"
+        }
+      ]
+    },
+    {
+      "label": "E5-03 | Chronicling America: global warming greenhouse 1988",
+      "notes": "1988 press coverage \u2014 Hansen testimony hit front page of NYT; how widely did it ripple?",
+      "api": "ca",
+      "query": "global warming greenhouse effect climate",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "E5-04 | LOC General: IPCC First Assessment Report 1990 Congress",
+      "notes": "First IPCC report (1990) \u2014 the international scientific consensus transmitted to policymakers",
+      "api": "loc",
+      "query": "IPCC Intergovernmental Panel Climate Change 1990 assessment Congress",
+      "total_results": 13,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "S.Res.708 - 115th Congress (2017-2018): A resolution expressing the need for bold climate action in response to the release of the United Nations report entitled \"Global Warming of 1.5 C, an IPCC special report on the impacts of global warming of 1.5 C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty\" and the Fourth National Climate Assessment report entitled \"Volume II: Impacts, Risks, and Adaptation in the United States\" by the United States Global Change Research Program.",
+          "url": "https://www.congress.gov/bill/115th-congress/senate-resolution/708"
+        },
+        {
+          "title": "Climate Change Litigation in Europe and Australia",
+          "url": "https://www.loc.gov/item/2025661322/"
+        },
+        {
+          "title": "Thinking like a climate : governing a city in times of environmental change",
+          "url": "https://www.loc.gov/item/2020006171/"
+        }
+      ]
+    },
+    {
+      "label": "E5-05 | LOC General: Rio Earth Summit UNFCCC 1992 Congress",
+      "notes": "Rio de Janeiro Earth Summit (1992) \u2014 the first international climate treaty, ratified by the Senate",
+      "api": "loc",
+      "query": "Rio Earth Summit climate convention UNFCCC 1992 Congress treaty",
+      "total_results": 4,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Global carbon pricing : the path to climate cooperation",
+          "url": "https://www.loc.gov/item/2020719818/"
+        },
+        {
+          "title": "Climate change and the oil industry : common problem, varying strategies",
+          "url": "https://www.loc.gov/item/2022667417/"
+        },
+        {
+          "title": "The role of the patent system in stimulating innovation and technology transfer for climate change : including aspects of licensing and competition law",
+          "url": "https://www.loc.gov/item/2020718404/"
+        }
+      ]
+    },
+    {
+      "label": "V-01 | FSA/OWI: Dust Bowl erosion drought Oklahoma Kansas",
+      "notes": "FSA Dust Bowl documentation \u2014 environmental devastation as a preview of climate-driven landscape change",
+      "api": "loc",
+      "query": "dust bowl erosion drought Oklahoma Kansas",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "V-02 | FSA/OWI: Dust storm farmer Plains wind erosion",
+      "notes": "Arthur Rothstein's iconic Dust Bowl images \u2014 LC's strongest visual climate-adjacent material",
+      "api": "loc",
+      "query": "dust storm farmer Plains wind erosion",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "V-03 | FSA/OWI: drought California farmworker water",
+      "notes": "Western drought photography \u2014 water scarcity documentation",
+      "api": "loc",
+      "query": "drought California farmworker water irrigation",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "V-04 | Photos: USGS glacier mountain ice survey historical",
+      "notes": "USGS glacier photographs \u2014 the most powerful visual evidence of long-term climate change",
+      "api": "loc",
+      "query": "glacier mountain ice retreat survey photograph",
+      "total_results": 2,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Guide to the special collections of prints & photographs in the Library of Congress,",
+          "url": "https://www.loc.gov/item/54060020/"
+        },
+        {
+          "title": "Old Indian trails; incidents of camp and trail life, covering two years exploration through the Rocky Mountains of Canada,",
+          "url": "https://www.loc.gov/item/11015201/"
+        },
+        {
+          "title": "The opal sea : continued studies in impressions and appearances /",
+          "url": "https://www.loc.gov/item/06008871/"
+        }
+      ]
+    },
+    {
+      "label": "V-05 | Photos: Hayden Wheeler King survey landscape 1870 1880",
+      "notes": "Great Surveys of the West (1870s) \u2014 baseline landscape photographs from before warming",
+      "api": "loc",
+      "query": "Hayden survey Wheeler survey landscape mountain photograph",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Guide to the special collections of prints & photographs in the Library of Congress,",
+          "url": "https://www.loc.gov/item/54060020/"
+        },
+        {
+          "title": "Waddell Dam, On Agua Fria River, 35 miles northwest of Phoenix, Phoenix, Maricopa County, AZ",
+          "url": "https://www.loc.gov/item/az0230/"
+        },
+        {
+          "title": "The tribute book, a record of the munificence, self-sacrifice and patriotism of the  American people during the war for the union ...",
+          "url": "https://www.loc.gov/item/06010169/"
+        }
+      ]
+    },
+    {
+      "label": "V-06 | Maps: coastal survey United States 1880 1900 shoreline",
+      "notes": "US Coast and Geodetic Survey maps \u2014 160 years of coastline documentation, evidence of sea level change",
+      "api": "loc",
+      "query": "coast survey United States shoreline chart 1880 1900",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "V-07 | Photos: Weather Bureau instruments meteorological station",
+      "notes": "Photographs of the infrastructure of climate measurement \u2014 the institutional record",
+      "api": "loc",
+      "query": "Weather Bureau meteorological station instruments",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Washington, D.C. October, 1943. The District of Columbia U.S. Weather Bureau Station at the National Airport",
+          "url": "https://www.loc.gov/item/2004667482/"
+        },
+        {
+          "title": "Guide to the special collections of prints & photographs in the Library of Congress,",
+          "url": "https://www.loc.gov/item/54060020/"
+        },
+        {
+          "title": "Punch",
+          "url": "https://www.loc.gov/item/10003698/"
+        }
+      ]
+    },
+    {
+      "label": "V-08 | FSA/OWI: flood river damage 1936 1937 1938",
+      "notes": "Great Flood photography \u2014 extreme weather events documented during the Dust Bowl era",
+      "api": "loc",
+      "query": "flood river damage destruction 1936 1937 1938",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "M-01 | Chronicling America: carbon dioxide climate 1960-1975 (silence test)",
+      "notes": "THE key negative finding \u2014 v1 returned only 1 result across 15 years. The knowledge gap.",
+      "api": "ca",
+      "query": "carbon dioxide atmosphere climate warming",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 1 of The Chronicle (Pascagoula, Miss.), January 16, 1962",
+          "url": "https://www.loc.gov/resource/sn87065526/1962-01-16/ed-1/?sp=1&q=carbon+dioxide+atmosphere+climate+warming"
+        }
+      ]
+    },
+    {
+      "label": "M-02 | Chronicling America: greenhouse effect 1960-1987 (awareness test)",
+      "notes": "When did 'greenhouse effect' enter public discourse? Measuring the lag between science and press.",
+      "api": "ca",
+      "query": "greenhouse effect warming atmosphere",
+      "total_results": 4,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Image 5 of The coastland times with which is combined the pilot and herald of Belhaven and Swan Quarter (Manteo, N.C.), March 9, 1962",
+          "url": "https://www.loc.gov/resource/sn99061532/1962-03-09/ed-1/?sp=5&q=greenhouse+effect+warming+atmosphere"
+        },
+        {
+          "title": "Image 17 of Peninsula enterprise (Accomac, Va.), July 21, 1960, (THIRD SECTION)",
+          "url": "https://www.loc.gov/resource/sn94060041/1960-07-21/ed-1/?sp=17&q=greenhouse+effect+warming+atmosphere"
+        },
+        {
+          "title": "Image 4 of The Chronicle (Pascagoula, Miss.), February 27, 1962, (SECTION ONE)",
+          "url": "https://www.loc.gov/resource/sn87065526/1962-02-27/ed-1/?sp=4&q=greenhouse+effect+warming+atmosphere"
+        }
+      ]
+    },
+    {
+      "label": "M-03 | Chronicling America: global warming 1970-1987 (term emergence)",
+      "notes": "When did 'global warming' as a phrase appear in newspapers? Before or after Hansen 1988?",
+      "api": "ca",
+      "query": "global warming",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "M-04 | Chronicling America: global warming 1988-1990 (post-Hansen)",
+      "notes": "Post-Hansen press explosion \u2014 contrast with pre-1988 silence to measure the inflection point",
+      "api": "ca",
+      "query": "global warming",
+      "total_results": 1,
+      "has_results": true,
+      "top_items": []
+    },
+    {
+      "label": "M-05 | LOC General: Exxon climate change internal research",
+      "notes": "Industry knowledge \u2014 the 'they' in 'What Did They Know?' includes the private sector",
+      "api": "loc",
+      "query": "Exxon climate change internal research fossil fuel industry",
+      "total_results": 140,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Climate change and the oil industry : common problem, varying strategies",
+          "url": "https://www.loc.gov/item/2022667417/"
+        },
+        {
+          "title": "Water for energy and fuel production",
+          "url": "https://www.loc.gov/item/2020717921/"
+        },
+        {
+          "title": "Extractive industries : the management of resources as a driver of sustainable development",
+          "url": "https://www.loc.gov/item/2022667475/"
+        }
+      ]
+    },
+    {
+      "label": "M-06 | LOC General: American Petroleum Institute climate carbon 1959",
+      "notes": "Edward Teller warned the API about CO2 in 1959 \u2014 LC may hold industry testimony or trade press",
+      "api": "loc",
+      "query": "American Petroleum Institute climate carbon dioxide",
+      "total_results": 1244,
+      "has_results": true,
+      "top_items": [
+        {
+          "title": "Global carbon pricing : the path to climate cooperation",
+          "url": "https://www.loc.gov/item/2020719818/"
+        },
+        {
+          "title": "Carbon emissions legislation",
+          "url": "https://www.loc.gov/item/2019669308/"
+        },
+        {
+          "title": "WTO law and trade policy reform for low-carbon technology diffusion : common concern of humankind, carbon pricing, and export credit support",
+          "url": "https://www.loc.gov/item/2020048849/"
+        }
+      ]
+    }
+  ]
+}
